@@ -1,54 +1,58 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
-from sklearn.metrics import mean_squared_error
-import pickle
+import xgboost as xgb
+from sklearn.model_selection import train_test_split, KFold, GridSearchCV
+from sklearn.metrics import r2_score
+import numpy as np
 
-CSV_FILE = "data/processed_weather_data.csv"
-RANDOM_FOREST_MODEL_FILE = "models/random_forest_model.pkl"
-XGBOOST_MODEL_FILE = "models/xgboost_model.pkl"
+# Load your data
+df = pd.read_csv("data/weather_data.csv")
 
-def train_models():
-    try:
-        # Load the preprocessed CSV file
-        df = pd.read_csv(CSV_FILE)
+# Feature engineering (add more features for better performance)
+X = df[['humidity', 'hour', 'day', 'month']]  # Using more features
+y = df['temperature']  # Target variable (temperature)
 
-        # Features and target variable
-        X = df[["humidity"]]
-        y = df["temperature"]
+# Initialize the XGBoost model
+xgb_model = xgb.XGBRegressor(objective='reg:squarederror', n_estimators=100)
 
-        # Train-test split
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Hyperparameter tuning (optional, with GridSearchCV)
+param_grid = {
+    'max_depth': [3, 5, 7],
+    'learning_rate': [0.01, 0.1, 0.3],
+    'n_estimators': [100, 200],
+    'subsample': [0.8, 1.0],
+    'colsample_bytree': [0.8, 1.0]
+}
 
-        # RandomForest Model
-        rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
-        rf_model.fit(X_train, y_train)
-        rf_predictions = rf_model.predict(X_test)
-        rf_rmse = mean_squared_error(y_test, rf_predictions, squared=False)
-        print(f"RandomForest RMSE: {rf_rmse:.2f}")
+grid_search = GridSearchCV(estimator=xgb_model, param_grid=param_grid, cv=3, n_jobs=-1, scoring='neg_mean_squared_error')
+grid_search.fit(X, y)
 
-        # Save the RandomForest model
-        with open(RANDOM_FOREST_MODEL_FILE, "wb") as file:
-            pickle.dump(rf_model, file)
-        print(f"RandomForest model saved to {RANDOM_FOREST_MODEL_FILE}")
+print(f"Best Hyperparameters: {grid_search.best_params_}")
 
-        # XGBoost Model
-        xgb_model = XGBRegressor(n_estimators=100, learning_rate=0.1, random_state=42)
-        xgb_model.fit(X_train, y_train)
-        xgb_predictions = xgb_model.predict(X_test)
-        xgb_rmse = mean_squared_error(y_test, xgb_predictions, squared=False)
-        print(f"XGBoost RMSE: {xgb_rmse:.2f}")
+# Use the best model from grid search
+best_model = grid_search.best_estimator_
 
-        # Save the XGBoost model
-        with open(XGBOOST_MODEL_FILE, "wb") as file:
-            pickle.dump(xgb_model, file)
-        print(f"XGBoost model saved to {XGBOOST_MODEL_FILE}")
+# Perform manual cross-validation with the best model
+kf = KFold(n_splits=5, shuffle=True, random_state=42)  # Split the data into 5 parts
+cv_scores = []
 
-    except FileNotFoundError:
-        print(f"File {CSV_FILE} not found. Please preprocess the data first.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+# Train and evaluate the model using cross-validation
+for train_index, val_index in kf.split(X):
+    X_train, X_val = X.iloc[train_index], X.iloc[val_index]
+    y_train, y_val = y.iloc[train_index], y.iloc[val_index]
+    
+    best_model.fit(X_train, y_train)
+    y_pred = best_model.predict(X_val)
+    
+    r2 = r2_score(y_val, y_pred)
+    cv_scores.append(r2)
 
-if __name__ == "__main__":
-    train_models()
+# Print the R² scores for each fold
+print(f"R² scores from cross-validation: {cv_scores}")
+print(f"Average R² score: {np.mean(cv_scores)}")
+
+# Train the best model on the entire dataset
+best_model.fit(X, y)
+
+# Save the trained model
+best_model.save_model("models/xgboost_model_best.json")
+print("XGBoost model trained and saved with best hyperparameters.")

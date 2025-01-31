@@ -1,28 +1,27 @@
-import pandas as pd
 import pickle
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
-RANDOM_FOREST_MODEL_FILE = "models/random_forest_model.pkl"
-XGBOOST_MODEL_FILE = "models/xgboost_model.pkl"
+# Load the trained model
+with open('models/random_forest_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
-def predict_weather(humidity, model_type="RandomForest"):
-    try:
-        # Load the selected model
-        model_file = RANDOM_FOREST_MODEL_FILE if model_type == "RandomForest" else XGBOOST_MODEL_FILE
-        with open(model_file, "rb") as file:
-            model = pickle.load(file)
+# Load or define the label encoder for 'weather' feature
+# Assuming the LabelEncoder was saved or previously fitted during training
+label_encoder = LabelEncoder()
+label_encoder.fit(['Clear', 'Cloudy', 'Rain', 'Foggy'])  # Or load if saved
 
-        # Create a DataFrame for the input
-        input_data = pd.DataFrame({"humidity": [humidity]})
+# Sample input for prediction (ensure these values match the training data features)
+input_data = pd.DataFrame({
+    'humidity': [0.3],
+    'hour': [12],
+    'day': [2],
+    'month': [1],
+    'weather': [label_encoder.transform(['Clear'])[0]]  # Transforming 'Clear' to its encoded value
+})
 
-        # Make predictions
-        predicted_temp = model.predict(input_data)[0]
-        print(f"Predicted Temperature: {predicted_temp:.2f}°C using {model_type}")
-    except FileNotFoundError:
-        print(f"{model_type} model file not found. Please train the model first.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+# Predict the temperature
+predicted_temperature = model.predict(input_data)
 
-if __name__ == "__main__":
-    humidity_input = float(input("Enter the humidity percentage: "))
-    model_choice = input("Enter model type (RandomForest/XGBoost): ").strip()
-    predict_weather(humidity_input, model_type=model_choice)
+# Print the result
+print(f"Predicted Temperature: {predicted_temperature[0]}°C")
