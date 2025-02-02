@@ -28,18 +28,20 @@ def analyze_weather():
 
         # Visualizations
         plt.figure(figsize=(10, 6))
-        sns.histplot(df['temperature'], kde=True, color='blue')
+        sns.histplot(df['temperature'].dropna(), kde=True, color='blue')  # Drop NaN values for visualization
         plt.title('Temperature Distribution')
         plt.xlabel('Temperature')
         plt.ylabel('Frequency')
+        plt.tight_layout()  # Ensure proper layout
         plt.savefig('temperature_distribution.png')  # Save the plot
         plt.show()
 
         plt.figure(figsize=(10, 6))
-        sns.histplot(df['humidity'], kde=True, color='green')
+        sns.histplot(df['humidity'].dropna(), kde=True, color='green')  # Drop NaN values for visualization
         plt.title('Humidity Distribution')
         plt.xlabel('Humidity')
         plt.ylabel('Frequency')
+        plt.tight_layout()  # Ensure proper layout
         plt.savefig('humidity_distribution.png')  # Save the plot
         plt.show()
 

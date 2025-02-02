@@ -2,12 +2,18 @@ import xgboost as xgb
 import joblib
 import pandas as pd
 import logging
+import os
 
 # Configure logging for detailed output
 logging.basicConfig(level=logging.INFO)
 
 class WeatherPredictor:
     def __init__(self, xgb_model_path, rf_model_path):
+        # Check if model files exist
+        if not os.path.exists(xgb_model_path) or not os.path.exists(rf_model_path):
+            logging.error("Model files not found. Please check the file paths.")
+            raise FileNotFoundError("One or more model files are missing.")
+        
         # Load the trained XGBoost model (Booster)
         self.xgb_model = xgb.Booster()
         self.xgb_model.load_model(xgb_model_path)
@@ -49,35 +55,40 @@ class WeatherPredictor:
         return result
 
 if __name__ == "__main__":
-    # Initialize WeatherPredictor with model paths
-    predictor = WeatherPredictor(xgb_model_path="models/xgboost_model.json", 
-                                 rf_model_path="models/random_forest_model.pkl")
+    try:
+        # Initialize WeatherPredictor with model paths
+        predictor = WeatherPredictor(xgb_model_path="models/xgboost_model.json", 
+                                     rf_model_path="models/random_forest_model.pkl")
 
-    # Example inputs for prediction
-    humidity = 60
-    hour = 14
-    day = 20
-    month = 5
-    pressure = 1015
+        # Example inputs for prediction
+        humidity = 60
+        hour = 14
+        day = 20
+        month = 5
+        pressure = 1015
 
-    # Make predictions and print the results
-    predictions = predictor.make_predictions(humidity, hour, day, month, pressure)
+        # Make predictions and print the results
+        predictions = predictor.make_predictions(humidity, hour, day, month, pressure)
+        
+        # Print the prediction results in a detailed and readable way
+        print("\n--- Weather Prediction Results ---")
+        print(f"Input Data: Humidity = {humidity}%, Hour = {hour}, Day = {day}, Month = {month}, Pressure = {pressure} hPa")
+        print(f"XGBoost Model Prediction: {predictions['XGBoost Prediction']}°C")
+        print(f"RandomForest Model Prediction: {predictions['RandomForest Prediction']}°C")
+
+        # Provide explanation on the results
+        print("\n--- Explanation ---")
+        print("1. XGBoost Model Prediction: This prediction is made using the XGBoost algorithm.")
+        print("   It uses gradient boosting to predict the temperature based on input features.")
+        print(f"   The predicted temperature from XGBoost is {predictions['XGBoost Prediction']}°C.")
+        print("2. RandomForest Model Prediction: This prediction is made using the RandomForest algorithm.")
+        print("   It uses multiple decision trees and averages their predictions.")
+        print(f"   The predicted temperature from RandomForest is {predictions['RandomForest Prediction']}°C.")
+        print("3. Both models give slightly different predictions, which is normal.")
+        print("4. You can either use one model's prediction or combine them for a final estimate.")
+        print(f"   Average temperature prediction: {(predictions['XGBoost Prediction'] + predictions['RandomForest Prediction']) / 2}°C")
     
-    # Print the prediction results in a detailed and readable way
-    print("\n--- Weather Prediction Results ---")
-    print(f"Input Data: Humidity = {humidity}%, Hour = {hour}, Day = {day}, Month = {month}, Pressure = {pressure} hPa")
-    print(f"XGBoost Model Prediction: {predictions['XGBoost Prediction']}°C")
-    print(f"RandomForest Model Prediction: {predictions['RandomForest Prediction']}°C")
-
-    # Provide explanation on the results
-    print("\n--- Explanation ---")
-    print("1. XGBoost Model Prediction: This prediction is made using the XGBoost algorithm.")
-    print("   It uses gradient boosting to predict the temperature based on input features.")
-    print(f"   The predicted temperature from XGBoost is {predictions['XGBoost Prediction']}°C.")
-    print("2. RandomForest Model Prediction: This prediction is made using the RandomForest algorithm.")
-    print("   It uses multiple decision trees and averages their predictions.")
-    print(f"   The predicted temperature from RandomForest is {predictions['RandomForest Prediction']}°C.")
-    print("3. Both models give slightly different predictions, which is normal.")
-    print("4. You can either use one model's prediction or combine them for a final estimate.")
-    print("   For example, you can take the average of both predictions.")
-    print(f"   Average temperature prediction: {(predictions['XGBoost Prediction'] + predictions['RandomForest Prediction']) / 2}°C")
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
