@@ -205,35 +205,3 @@ Git Large File Storage
 
 Since model files like .dll required by XGBoost exceed GitHub's 100MB file size limit, Git LFS is used to track and store these large files.
 
-To set up Git LFS:
-
-Install Git LFS from here.
-
-Run git lfs install to initialize LFS in your local repository.
-
-Track large files with the command:
-
-git lfs track "*.dll"
-
-Usage
-
-Run the weather data analysis:
-
-python source/analyze_weather.py
-
-Train the machine learning models:
-
-python source/train_model.py
-
-Use the trained models:
-
-The models are saved in the models/ directory.
-
-Load and use them for predictions by loading the saved .json (XGBoost) or .pkl (Random Forest) files.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
-
-This is your full `README.md` file with detailed explanations about the weather analysis project, including all aspects of the project’s structure, data handling, machine learning models, and usage instructions. You can copy and paste it into your project’s `README.md`. Let me know if you need anything else!
