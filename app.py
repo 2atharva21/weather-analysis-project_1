@@ -50,6 +50,35 @@ mae = mean_absolute_error(y_test, y_pred)
 st.sidebar.title("🌦️ Weather Prediction App")
 st.sidebar.markdown("Predicts temperature based on weather conditions.")
 
+# Introduction to the Project
+st.title("🌦️ Weather Prediction App by Atharva Zare")
+
+st.markdown("""
+# Introduction
+
+Welcome to the **Weather Prediction App**! This app is designed to predict the temperature based on weather parameters such as humidity, pressure, time of the day, and more. By leveraging a machine learning model, we aim to forecast the temperature accurately, and provide insights into various weather conditions.
+
+### Key Features:
+- **Prediction**: Predicts the temperature based on user inputs like humidity, hour, day, month, and pressure.
+- **Data Visualization**: Displays various charts like scatter plots, heatmaps, and distributions to help you understand the data better.
+- **XGBoost Model**: The app uses an XGBoost regression model to train on historical weather data and make predictions.
+- **Interactive Interface**: You can adjust the input parameters and instantly see the predicted temperature and weather condition.
+- **Detailed Insights**: View actual vs predicted temperature, correlation heatmaps, and the distribution of temperature and humidity.
+
+---
+
+### How It Works:
+1. **User Input**: Select values for weather parameters like humidity, hour, day, month, and pressure.
+2. **Prediction**: The app uses the trained XGBoost model to predict the temperature based on the inputs.
+3. **Weather Condition**: The app categorizes the predicted temperature as **Hot**, **Warm**, **Cool**, or **Cold**.
+4. **Visualizations**: View visualizations like scatter plots and histograms to better understand the data and the model's performance.
+
+---
+
+This app is a fun and interactive way to explore weather data and see how machine learning can be used to predict future temperatures. Let's dive in and start making predictions!
+
+""")
+
 # Show Raw Data Option
 if st.sidebar.checkbox('Show Raw Data'):
     st.subheader("📊 Raw Weather Data")
