@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score
 import joblib
 
 # Load the dataset (replace this with your file path or dataset)
-df = pd.read_csv('data/weather_data.csv')
+df = pd.read_csv('weather_data.csv')
 
 # Check for missing values
 print("Missing values in each column:")
@@ -82,7 +82,7 @@ from sklearn.metrics import r2_score
 import joblib
 
 # Load the dataset (replace this with your file path or dataset)
-df = pd.read_csv('data/weather_data.csv')
+df = pd.read_csv('weather_data.csv')
 
 # Check for missing values
 print("Missing values in each column:")

@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-CSV_FILE = "data/weather_data.csv"
+CSV_FILE = "weather_data.csv"
 
 def analyze_weather():
     try:

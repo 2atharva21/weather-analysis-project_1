@@ -5,7 +5,7 @@ import seaborn as sns
 def visualize_data():
     try:
         # Read the weather data CSV file
-        df = pd.read_csv("data/weather_data.csv")
+        df = pd.read_csv("weather_data.csv")
 
         # Print the column names to ensure you have the 'timestamp' column
         print("Columns in the dataset:", df.columns)
