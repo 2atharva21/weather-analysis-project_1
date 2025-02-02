@@ -107,6 +107,13 @@ st.pyplot(fig)
 
 # Correlation Heatmap
 st.subheader("🛠️ Correlation Heatmap of Weather Data")
+st.markdown("""
+    The **Correlation Heatmap** shows how different weather parameters (like temperature, humidity, and pressure) are related to each other.
+    - Red means a strong positive relationship: When one factor increases, the other one also increases.
+    - Blue means a negative relationship: When one factor increases, the other one decreases.
+    - White or gray means there’s no significant relationship.
+    This heatmap helps us understand how different weather variables interact with each other.
+""")
 corr = df_clean[['temperature', 'humidity', 'pressure', 'hour', 'day', 'month']].corr()
 plt.figure(figsize=(8, 6))
 sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', linewidths=1)
@@ -115,6 +122,12 @@ st.pyplot()
 
 # Temperature Distribution
 st.subheader("🌡️ Temperature Distribution")
+st.markdown("""
+    The **Temperature Distribution** chart shows how temperatures are spread out in the dataset.
+    - If most of the data is on the right side of the graph, it means temperatures are mostly high (hot days).
+    - If it's on the left, temperatures are usually cooler.
+    This helps us understand the general climate trends in the data.
+""")
 plt.figure(figsize=(10, 6))
 sns.histplot(df['temperature'], kde=True, color='blue')
 plt.title('Temperature Distribution')
@@ -124,6 +137,12 @@ st.pyplot()
 
 # Humidity Distribution
 st.subheader("💧 Humidity Distribution")
+st.markdown("""
+    The **Humidity Distribution** chart shows how humidity is spread out in the dataset.
+    - If the bars are mostly on the left, it means the air is usually dry (low humidity).
+    - If the bars are on the right, the air is usually humid (high humidity).
+    This helps us understand how often we experience different levels of humidity.
+""")
 plt.figure(figsize=(10, 6))
 sns.histplot(df['humidity'], kde=True, color='green')
 plt.title('Humidity Distribution')
