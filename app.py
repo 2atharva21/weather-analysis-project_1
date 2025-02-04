@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_absolute_error
+from sklearn.ensemble import RandomForestRegressor
 
 # Check if dataset exists
 DATA_FILE = 'weather_data.csv'
@@ -33,18 +34,26 @@ df_clean[['humidity', 'hour', 'day', 'month']] = scaler.fit_transform(
     df_clean[['humidity', 'hour', 'day', 'month']]
 )
 
-# Train the model
-X = df_clean[['humidity', 'hour', 'day', 'month', ]]
+# Prepare data for training
+X = df_clean[['humidity', 'hour', 'day', 'month']]
 y = df_clean['temperature']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+# XGBoost Model
 xgb_model = xgb.XGBRegressor(objective='reg:squarederror', n_estimators=100)
 xgb_model.fit(X_train, y_train)
 
-# Evaluate model
-y_pred = xgb_model.predict(X_test)
-mae = mean_absolute_error(y_test, y_pred)
+# Random Forest Model
+rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
+rf_model.fit(X_train, y_train)
+
+# Evaluate models
+y_pred_xgb = xgb_model.predict(X_test)
+y_pred_rf = rf_model.predict(X_test)
+
+mae_xgb = mean_absolute_error(y_test, y_pred_xgb)
+mae_rf = mean_absolute_error(y_test, y_pred_rf)
 
 # Sidebar
 st.sidebar.title("🌦️ Weather Prediction App")
@@ -53,29 +62,29 @@ st.sidebar.markdown("Predicts temperature based on weather conditions.")
 # Introduction to the Project
 st.title("🌦️ Weather Prediction App by Atharva Zare")
 
-st.markdown("""
+st.markdown(""" 
 # Introduction
 
-Welcome to the **Weather Prediction App**! This app is designed to predict the temperature based on weather parameters such as humidity, pressure, time of the day, and more. By leveraging a machine learning model, we aim to forecast the temperature accurately, and provide insights into various weather conditions.
+Welcome to the **Weather Prediction App**! This app is designed to predict the temperature based on weather parameters such as humidity, pressure, time of the day, and more. By leveraging machine learning models like **XGBoost** and **Random Forest**, we aim to forecast the temperature accurately.
 
 ### Key Features:
-- **Prediction**: Predicts the temperature based on user inputs like humidity, hour, day, month, and pressure.
-- **Data Visualization**: Displays various charts like scatter plots, heatmaps, and distributions to help you understand the data better.
-- **XGBoost Model**: The app uses an XGBoost regression model to train on historical weather data and make predictions.
+- **Prediction**: Predicts the temperature based on user inputs.
+- **Data Visualization**: Displays various charts like scatter plots, heatmaps, and distributions.
+- **XGBoost and Random Forest Models**: The app uses two different models to train on historical weather data and make predictions.
 - **Interactive Interface**: You can adjust the input parameters and instantly see the predicted temperature and weather condition.
 - **Detailed Insights**: View actual vs predicted temperature, correlation heatmaps, and the distribution of temperature and humidity.
 
 ---
 
 ### How It Works:
-1. **User Input**: Select values for weather parameters like humidity, hour, day, month, and pressure.
-2. **Prediction**: The app uses the trained XGBoost model to predict the temperature based on the inputs.
-3. **Weather Condition**: The app categorizes the predicted temperature as **Hot**, **Warm**, **Cool**, or **Cold**.
-4. **Visualizations**: View visualizations like scatter plots and histograms to better understand the data and the model's performance.
+1. **User Input**: Select values for weather parameters like humidity, hour, day, month.
+2. **Prediction**: The app uses either XGBoost or Random Forest model to predict the temperature.
+3. **Weather Condition**: Categorize the predicted temperature as **Hot**, **Warm**, **Cool**, or **Cold**.
+4. **Visualizations**: View visualizations to better understand the data and the models' performance.
 
----
+--- 
 
-This app is a fun and interactive way to explore weather data and see how machine learning can be used to predict future temperatures. Let's dive in and start making predictions!
+This app is a fun and interactive way to explore weather data and machine learning!
 
 """)
 
@@ -83,6 +92,9 @@ This app is a fun and interactive way to explore weather data and see how machin
 if st.sidebar.checkbox('Show Raw Data'):
     st.subheader("📊 Raw Weather Data")
     st.write(df)
+
+# Model Selection
+model_choice = st.sidebar.selectbox("Select Prediction Model", ("XGBoost", "Random Forest"))
 
 # City Selector
 city = st.sidebar.selectbox('🏙️ Select City', df['city'].unique())
@@ -94,26 +106,20 @@ hour = st.sidebar.slider("⏳ Hour of the Day", 0, 23, 12)
 day = st.sidebar.slider("📅 Day of the Month", 1, 31, 1)
 month = st.sidebar.slider("📆 Month", 1, 12, 1)
 
-
 # Scatter Plot (Actual vs Predicted)
 st.subheader("📉 Actual vs Predicted Temperature")
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter(y_test, y_pred, alpha=0.5)
+ax.scatter(y_test, y_pred_xgb, alpha=0.5, label="XGBoost")
+ax.scatter(y_test, y_pred_rf, alpha=0.5, label="Random Forest")
 ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], '--r', lw=2)
 ax.set_title('Actual vs Predicted Temperature')
 ax.set_xlabel('Actual Temperature')
 ax.set_ylabel('Predicted Temperature')
+ax.legend()
 st.pyplot(fig)
 
 # Correlation Heatmap
 st.subheader("🛠️ Correlation Heatmap of Weather Data")
-st.markdown("""
-    The **Correlation Heatmap** shows how different weather parameters (like temperature, humidity, and pressure) are related to each other.
-    - Red means a strong positive relationship: When one factor increases, the other one also increases.
-    - Blue means a negative relationship: When one factor increases, the other one decreases.
-    - White or gray means there’s no significant relationship.
-    This heatmap helps us understand how different weather variables interact with each other.
-""")
 corr = df_clean[['temperature', 'humidity', 'hour', 'day', 'month']].corr()
 plt.figure(figsize=(8, 6))
 sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', linewidths=1)
@@ -122,13 +128,6 @@ st.pyplot()
 
 # Temperature Distribution
 st.subheader("🌡️ Temperature Distribution")
-st.markdown("""
-    The **Temperature Distribution** chart shows how temperatures are spread out in the dataset.
-    - If most of the data is on the right side of the graph, it means temperatures are mostly high (hot days).
-    - If it's on the left, temperatures are usually cooler.
-    This helps us understand the general climate trends in the data.
-""")
-plt.figure(figsize=(10, 6))
 sns.histplot(df['temperature'], kde=True, color='blue')
 plt.title('Temperature Distribution')
 plt.xlabel('Temperature (°C)')
@@ -137,13 +136,6 @@ st.pyplot()
 
 # Humidity Distribution
 st.subheader("💧 Humidity Distribution")
-st.markdown("""
-    The **Humidity Distribution** chart shows how humidity is spread out in the dataset.
-    - If the bars are mostly on the left, it means the air is usually dry (low humidity).
-    - If the bars are on the right, the air is usually humid (high humidity).
-    This helps us understand how often we experience different levels of humidity.
-""")
-plt.figure(figsize=(10, 6))
 sns.histplot(df['humidity'], kde=True, color='green')
 plt.title('Humidity Distribution')
 plt.xlabel('Humidity (%)')
@@ -157,11 +149,17 @@ st.subheader(f"🌍 Weather Prediction for {city}")
 input_data = np.array([[humidity, hour, day, month]])
 input_data_scaled = scaler.transform(input_data)
 
-# Make Prediction
-predicted_temp = xgb_model.predict(input_data_scaled)[0]
+# Make Prediction Based on Selected Model
+if model_choice == "XGBoost":
+    predicted_temp = xgb_model.predict(input_data_scaled)[0]
+    model_name = "XGBoost"
+else:
+    predicted_temp = rf_model.predict(input_data_scaled)[0]
+    model_name = "Random Forest"
 
 # Display Result
 st.write(f"🌡️ **Predicted Temperature for {city}: {predicted_temp:.2f}°C**")
+st.write(f"📊 **Model Used: {model_name}**")
 
 # Weather Condition
 if predicted_temp > 30:
