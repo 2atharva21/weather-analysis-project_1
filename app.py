@@ -118,13 +118,7 @@ ax.set_ylabel('Predicted Temperature')
 ax.legend()
 st.pyplot(fig)
 
-# Correlation Heatmap
-st.subheader("🛠️ Correlation Heatmap of Weather Data")
-corr = df_clean[['temperature', 'humidity', 'hour', 'day', 'month']].corr()
-plt.figure(figsize=(8, 6))
-sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', linewidths=1)
-plt.title('Correlation Heatmap')
-st.pyplot()
+
 
 # Temperature Distribution
 st.subheader("🌡️ 1. Temperature Distribution")
@@ -261,6 +255,13 @@ The median, upper and lower quartiles, whiskers, and outliers are visualized.
 
 X-axis: Humidity percentage.""")
 
+# Correlation Heatmap
+st.subheader("🛠️ 7 Correlation Heatmap of Weather Data")
+corr = df_clean[['temperature', 'humidity', 'hour', 'day', 'month']].corr()
+plt.figure(figsize=(8, 6))
+sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', linewidths=1)
+plt.title('Correlation Heatmap')
+st.pyplot()
 # Prediction
 st.subheader(f"🌍 Weather Prediction for {city}")
 
