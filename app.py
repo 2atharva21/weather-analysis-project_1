@@ -153,7 +153,8 @@ ax2.set_ylabel('Frequency')
 plt.tight_layout()
 st.pyplot(fig2)
 st.markdown("""
-### Explanation for Figure 2: Humidity Distribution  
+### Explanation for Figure 2: Humidity Distribution 
+ 
 Purpose: This plot shows the distribution of humidity values in your dataset.
 
 Histogram: The green bars represent the frequency of humidity values within specific intervals.
