@@ -127,20 +127,132 @@ plt.title('Correlation Heatmap')
 st.pyplot()
 
 # Temperature Distribution
-st.subheader("🌡️ Temperature Distribution")
-sns.histplot(df['temperature'], kde=True, color='blue')
-plt.title('Temperature Distribution')
-plt.xlabel('Temperature (°C)')
-plt.ylabel('Frequency')
-st.pyplot()
+st.subheader("🌡️ 1. Temperature Distribution")
+fig1, ax1 = plt.subplots(figsize=(8, 5))
+sns.histplot(df['temperature'], kde=True, color='blue', ax=ax1)
+ax1.set_title('Temperature Distribution')
+ax1.set_xlabel('Temperature (°C)')
+ax1.set_ylabel('Frequency')
+plt.tight_layout()
+st.pyplot(fig1)
+st.markdown("""
+### Purpose:This plot shows the distribution of temperature values in your dataset.
+### Histogram: The blue bars represent the frequency of temperature values falling within specific ranges.
+### KDE (Kernel Density Estimate): A smooth curve overlaid on the histogram (shown by kde=True) to show the probability density of the temperature distribution.
+### X-axis: Represents the temperature in degrees Celsius.
+### Y-axis: Represents the frequency, which shows how often a certain temperature value occurs.
+### Purpose of sns.histplot: It creates the histogram and the smooth KDE curve for the temperature distribution.""")
 
 # Humidity Distribution
-st.subheader("💧 Humidity Distribution")
-sns.histplot(df['humidity'], kde=True, color='green')
-plt.title('Humidity Distribution')
-plt.xlabel('Humidity (%)')
-plt.ylabel('Frequency')
-st.pyplot()
+st.subheader("💧 2. Humidity Distribution")
+fig2, ax2 = plt.subplots(figsize=(8, 5))
+sns.histplot(df['humidity'], kde=True, color='green', ax=ax2)
+ax2.set_title('Humidity Distribution')
+ax2.set_xlabel('Humidity (%)')
+ax2.set_ylabel('Frequency')
+plt.tight_layout()
+st.pyplot(fig2)
+st.markdown("""
+### Explanation for Figure 2: Humidity Distribution  
+Purpose: This plot shows the distribution of humidity values in your dataset.
+
+Histogram: The green bars represent the frequency of humidity values within specific intervals.
+
+KDE (Kernel Density Estimate): A smooth curve (overlayed on the histogram) that shows the probability density of humidity values.
+
+X-axis: Humidity percentage.
+Y-axis: Frequency of humidity values.    
+            """)
+
+
+# Distribution Plot: Humidity Distribution (with custom bins)
+st.subheader("3. Distribution Plot: Humidity Distribution")
+fig4, ax4 = plt.subplots(figsize=(8, 5))
+sns.histplot(df['humidity'], kde=True, color='blue', bins=20, ax=ax4)
+ax4.set_title('Humidity Distribution')
+ax4.set_xlabel('Humidity (%)')
+ax4.set_ylabel('Frequency')
+plt.tight_layout()
+st.pyplot(fig4)
+st.markdown("""         
+### Explanation for Figure 3: Humidity Distribution (with custom bins)
+
+Purpose: Similar to the previous humidity plot, but with custom bins for frequency intervals.
+            
+Bins: Specifies bins=20, which divides the data into 20 bars.
+
+KDE: The smooth curve represents the distribution of humidity values.
+
+X-axis: Humidity percentage (grouped by custom bins).
+
+Y-axis: Frequency of humidity values.            
+            """)
+
+# Heatmap of Correlation Matrix
+st.subheader("4. Heatmap of Correlation Matrix")
+fig5, ax5 = plt.subplots(figsize=(8, 6))
+correlation_matrix = df[['temperature', 'humidity']].corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5, ax=ax5)
+ax5.set_title('Correlation Heatmap: Temperature and Humidity')
+plt.tight_layout()
+st.pyplot(fig5)
+st.markdown("""
+### Explanation for Figure 4: Correlation Heatmap
+Purpose: Shows the relationship (correlation) between temperature and humidity.
+
+Correlation Matrix: Measures how closely temperature and humidity are related:
+
+Positive correlation: Values close to 1 (both increase together).
+
+Negative correlation: Values close to -1 (one increases while the other 
+decreases).
+No correlation: Values close to 0.
+
+Heatmap: Uses color to represent the strength of correlation (coolwarm color 
+
+map: blue for negative, red for positive).
+
+Annotations (annot=True): Displays correlation values inside the heatmap cells.
+
+X and Y-axis: Variables being correlated (temperature vs humidity)""")
+
+# Boxplot: Temperature Data
+st.subheader("5. Boxplot: Temperature Data")
+fig6, ax6 = plt.subplots(figsize=(8, 5))
+sns.boxplot(x=df['temperature'], color='red', ax=ax6)
+ax6.set_title('Temperature Boxplot')
+ax6.set_xlabel('Temperature (°C)')
+plt.tight_layout()
+st.pyplot(fig6)
+st.markdown("""
+### Explanation for Figure 5: Temperature Boxplot
+Purpose: Summarizes the temperature data distribution.
+
+Boxplot: The red box represents the range within which most of the temperature data lies:
+The median value is the line inside the box.
+The upper and lower quartiles are represented by the edges of the box.
+The "whiskers" show the range of the data (excluding outliers).
+Outliers are plotted as points outside the whiskers.
+
+X-axis: Temperature values.""")
+
+# Boxplot: Humidity Data
+st.subheader("6. Boxplot: Humidity Data")
+fig7, ax7 = plt.subplots(figsize=(8, 5))
+sns.boxplot(x=df['humidity'], color='blue', ax=ax7)
+ax7.set_title('Humidity Boxplot')
+ax7.set_xlabel('Humidity (%)')
+plt.tight_layout()
+st.pyplot(fig7)
+st.markdown("""
+### Explanation for Figure 6: Humidity Boxplot
+Purpose: Similar to the previous boxplot, but this one is for humidity data.
+
+Boxplot: The blue box represents the distribution of humidity values:
+
+The median, upper and lower quartiles, whiskers, and outliers are visualized.
+
+X-axis: Humidity percentage.""")
 
 # Prediction
 st.subheader(f"🌍 Weather Prediction for {city}")

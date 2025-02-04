@@ -7,7 +7,7 @@ def visualize_data():
         # Read the weather data CSV file
         df = pd.read_csv("weather_data.csv")
 
-        # Print the column names to ensure you have the 'timestamp' column
+        # Print the column names to ensure you have the necessary columns
         print("Columns in the dataset:", df.columns)
 
         # If 'timestamp' is present, proceed with the visualization
@@ -43,9 +43,9 @@ def visualize_data():
             plt.show()
 
             # 3. Boxplot: Temperature vs Weather Condition
-            if 'weather' in df.columns:  # Check if weather column exists
+            if 'condition' in df.columns:  # Adjusted to 'condition' or correct column name
                 plt.figure(figsize=(10, 6))
-                sns.boxplot(x='weather', y='temperature', data=df, palette='Set2')
+                sns.boxplot(x='condition', y='temperature', data=df, palette='Set2')
                 plt.title('3. Temperature vs Weather Condition')
                 plt.xlabel('Weather Condition')
                 plt.ylabel('Temperature (°C)')
