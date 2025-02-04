@@ -1,61 +1,1001 @@
-city,temperature,humidity,weather,timestamp,hour,day,month,pressure,weekday,is_weekend
-Pune,25.0,0.55,Clear,2025-01-01 10:00:00,10,1,1,1013,2,0
-Mumbai,30.5,0.6,Cloudy,2025-01-01 10:00:00,10,1,1,1012,2,0
-Delhi,15.0,0.45,Foggy,2025-01-01 10:00:00,10,1,1,1010,2,0
-Chennai,28.0,0.7,Sunny,2025-01-01 10:00:00,10,1,1,1011,2,0
-Bangalore,22.0,0.5,Clear,2025-01-01 10:00:00,10,1,1,1014,2,0
-Hyderabad,26.5,0.6,Cloudy,2025-01-01 10:00:00,10,1,1,1013,2,0
-Kolkata,27.5,0.65,Foggy,2025-01-01 10:00:00,10,1,1,1012,2,0
-Jaipur,18.0,0.55,Clear,2025-01-01 10:00:00,10,1,1,1011,2,0
-Surat,29.0,0.75,Sunny,2025-01-01 10:00:00,10,1,1,1015,2,0
-Nagpur,24.0,0.6,Cloudy,2025-01-01 10:00:00,10,1,1,1012,2,0
-Pune,26.0,0.6,Foggy,2025-01-02 10:00:00,10,2,1,1013,3,0
-Mumbai,32.0,0.5,Sunny,2025-01-02 10:00:00,10,2,1,1012,3,0
-Delhi,17.5,0.4,Clear,2025-01-02 10:00:00,10,2,1,1010,3,0
-Chennai,29.0,0.55,Cloudy,2025-01-02 10:00:00,10,2,1,1011,3,0
-Bangalore,23.5,0.52,Sunny,2025-01-02 10:00:00,10,2,1,1014,3,0
-Hyderabad,28.0,0.63,Foggy,2025-01-02 10:00:00,10,2,1,1013,3,0
-Kolkata,26.0,0.68,Clear,2025-01-02 10:00:00,10,2,1,1012,3,0
-Jaipur,19.0,0.5,Cloudy,2025-01-02 10:00:00,10,2,1,1011,3,0
-Surat,30.5,0.72,Foggy,2025-01-02 10:00:00,10,2,1,1015,3,0
-Nagpur,25.5,0.6,Sunny,2025-01-02 10:00:00,10,2,1,1012,3,0
-Pune,24.5,0.53,Clear,2025-01-03 10:00:00,10,3,1,1013,4,0
-Mumbai,31.0,0.58,Cloudy,2025-01-03 10:00:00,10,3,1,1012,4,0
-Delhi,16.0,0.42,Foggy,2025-01-03 10:00:00,10,3,1,1010,4,0
-Chennai,28.5,0.65,Sunny,2025-01-03 10:00:00,10,3,1,1011,4,0
-Bangalore,21.0,0.56,Cloudy,2025-01-03 10:00:00,10,3,1,1014,4,0
-Hyderabad,27.0,0.61,Foggy,2025-01-03 10:00:00,10,3,1,1013,4,0
-Kolkata,27.0,0.62,Clear,2025-01-03 10:00:00,10,3,1,1012,4,0
-Jaipur,20.5,0.54,Sunny,2025-01-03 10:00:00,10,3,1,1011,4,0
-Surat,32.5,0.75,Cloudy,2025-01-03 10:00:00,10,3,1,1015,4,0
-Nagpur,26.0,0.59,Clear,2025-01-03 10:00:00,10,3,1,1012,4,0
-Pune,24.0,0.57,Cloudy,2025-01-04 10:00:00,10,4,1,1014,5,1
-Mumbai,29.5,0.55,Sunny,2025-01-04 10:00:00,10,4,1,1013,5,1
-Delhi,18.0,0.5,Clear,2025-01-04 10:00:00,10,4,1,1011,5,1
-Chennai,30.0,0.68,Foggy,2025-01-04 10:00:00,10,4,1,1012,5,1
-Bangalore,25.5,0.54,Sunny,2025-01-04 10:00:00,10,4,1,1013,5,1
-Hyderabad,29.0,0.65,Clear,2025-01-04 10:00:00,10,4,1,1014,5,1
-Kolkata,30.0,0.62,Cloudy,2025-01-04 10:00:00,10,4,1,1011,5,1
-Jaipur,21.5,0.55,Foggy,2025-01-04 10:00:00,10,4,1,1012,5,1
-Surat,28.0,0.7,Clear,2025-01-04 10:00:00,10,4,1,1015,5,1
-Nagpur,23.0,0.58,Sunny,2025-01-04 10:00:00,10,4,1,1013,5,1
-Pune,27.0,0.6,Cloudy,2025-01-05 10:00:00,10,5,1,1013,6,1
-Mumbai,32.5,0.55,Sunny,2025-01-05 10:00:00,10,5,1,1014,6,1
-Delhi,19.5,0.45,Foggy,2025-01-05 10:00:00,10,5,1,1010,6,1
-Chennai,26.5,0.68,Sunny,2025-01-05 10:00:00,10,5,1,1012,6,1
-Bangalore,22.5,0.6,Cloudy,2025-01-05 10:00:00,10,5,1,1013,6,1
-Hyderabad,25.5,0.62,Foggy,2025-01-05 10:00:00,10,5,1,1014,6,1
-Kolkata,28.5,0.55,Clear,2025-01-05 10:00:00,10,5,1,1011,6,1
-Jaipur,24.5,0.5,Cloudy,2025-01-05 10:00:00,10,5,1,1013,6,1
-Surat,29.0,0.72,Foggy,2025-01-05 10:00:00,10,5,1,1015,6,1
-Nagpur,27.5,0.55,Sunny,2025-01-05 10:00:00,10,5,1,1012,6,1
-Pune,28.0,0.55,Sunny,2025-01-06 10:00:00,10,6,1,1014,0,0
-Mumbai,31.5,0.5,Foggy,2025-01-06 10:00:00,10,6,1,1013,0,0
-Delhi,20.0,0.42,Clear,2025-01-06 10:00:00,10,6,1,1011,0,0
-Chennai,29.5,0.67,Cloudy,2025-01-06 10:00:00,10,6,1,1012,0,0
-Bangalore,24.0,0.59,Sunny,2025-01-06 10:00:00,10,6,1,1014,0,0
-Hyderabad,30.0,0.6,Clear,2025-01-06 10:00:00,10,6,1,1013,0,0
-Kolkata,30.5,0.65,Foggy,2025-01-06 10:00:00,10,6,1,1012,0,0
-Jaipur,23.5,0.55,Cloudy,2025-01-06 10:00:00,10,6,1,1011,0,0
-Surat,30.0,0.72,Sunny,2025-01-06 10:00:00,10,6,1,1015,0,0
-Nagpur,28.0,0.56,Clear,2025-01-06 10:00:00,10,6,1,1013,0,0
+timestamp,state,city,temperature,humidity,weather,hour,day,month,weekday,is_weekend
+2025-01-01,Haryana,Ambala,26.0,0.47,Foggy,0,1,1,2,0
+2025-01-02,Telangana,Karimnagar,15.0,0.75,Rainy,0,2,1,3,0
+2025-01-03,Tamil Nadu,Coimbatore,15.0,0.82,Clear,0,3,1,4,0
+2025-01-04,Nagaland,Mokokchung,12.0,0.52,Foggy,0,4,1,5,1
+2025-01-05,Goa,Margao,26.0,0.8,Stormy,0,5,1,6,1
+2025-01-06,Karnataka,Bangalore,12.0,0.41,Cloudy,0,6,1,0,0
+2025-01-07,Karnataka,Belagavi,20.0,0.89,Cloudy,0,7,1,1,0
+2025-01-08,Haryana,Gurugram,27.0,0.9,Cloudy,0,8,1,2,0
+2025-01-09,Andhra Pradesh,Vijayawada,31.0,0.79,Sunny,0,9,1,3,0
+2025-01-10,Uttarakhand,Dehradun,28.0,0.51,Foggy,0,10,1,4,0
+2025-01-11,Jharkhand,Deoghar,15.0,0.81,Sunny,0,11,1,5,1
+2025-01-12,Jharkhand,Dhanbad,24.0,0.86,Sunny,0,12,1,6,1
+2025-01-13,Jharkhand,Dhanbad,20.0,0.48,Clear,0,13,1,0,0
+2025-01-14,Mizoram,Serchhip,15.0,0.81,Clear,0,14,1,1,0
+2025-01-15,Tripura,Amarpur,11.0,0.48,Clear,0,15,1,2,0
+2025-01-16,Haryana,Ambala,11.0,0.54,Stormy,0,16,1,3,0
+2025-01-17,West Bengal,Asansol,30.0,0.62,Stormy,0,17,1,4,0
+2025-01-18,Odisha,Sambalpur,11.0,0.41,Stormy,0,18,1,5,1
+2025-01-19,Arunachal Pradesh,Tawang,22.0,0.7,Sunny,0,19,1,6,1
+2025-01-20,Meghalaya,Jowai,13.0,0.76,Rainy,0,20,1,0,0
+2025-01-21,Gujarat,Vadodara,32.0,0.85,Rainy,0,21,1,1,0
+2025-01-22,Manipur,Kakching,31.0,0.85,Foggy,0,22,1,2,0
+2025-01-23,Odisha,Sambalpur,10.0,0.68,Rainy,0,23,1,3,0
+2025-01-24,Assam,Tinsukia,12.0,0.7,Clear,0,24,1,4,0
+2025-01-25,Rajasthan,Jodhpur,10.0,0.45,Clear,0,25,1,5,1
+2025-01-26,Maharashtra,Aurangabad,12.0,0.59,Rainy,0,26,1,6,1
+2025-01-27,Chhattisgarh,Durg,17.0,0.42,Cloudy,0,27,1,0,0
+2025-01-28,Madhya Pradesh,Ujjain,20.0,0.87,Rainy,0,28,1,1,0
+2025-01-29,Mizoram,Aizawl,23.0,0.79,Rainy,0,29,1,2,0
+2025-01-30,Andhra Pradesh,Tirupati,19.0,0.9,Stormy,0,30,1,3,0
+2025-01-31,Mizoram,Serchhip,23.0,0.64,Clear,0,31,1,4,0
+2025-02-01,Karnataka,Bangalore,15.0,0.47,Cloudy,0,1,2,5,1
+2025-02-02,Mizoram,Aizawl,10.0,0.84,Rainy,0,2,2,6,1
+2025-02-03,Kerala,Kottayam,25.0,0.43,Sunny,0,3,2,0,0
+2025-02-04,Andhra Pradesh,Tirupati,10.0,0.72,Rainy,0,4,2,1,0
+2025-02-05,Haryana,Gurugram,17.0,0.4,Sunny,0,5,2,2,0
+2025-02-06,Goa,Ponda,24.0,0.58,Clear,0,6,2,3,0
+2025-02-07,Manipur,Imphal,20.0,0.52,Stormy,0,7,2,4,0
+2025-02-08,Uttarakhand,Dehradun,28.0,0.73,Cloudy,0,8,2,5,1
+2025-02-09,Himachal Pradesh,Manali,32.0,0.79,Cloudy,0,9,2,6,1
+2025-02-10,Tamil Nadu,Madurai,24.0,0.66,Stormy,0,10,2,0,0
+2025-02-11,Arunachal Pradesh,Ziro,33.0,0.55,Rainy,0,11,2,1,0
+2025-02-12,Andhra Pradesh,Vijayawada,10.0,0.72,Foggy,0,12,2,2,0
+2025-02-13,Uttarakhand,Roorkee,27.0,0.9,Rainy,0,13,2,3,0
+2025-02-14,Tamil Nadu,Coimbatore,31.0,0.63,Stormy,0,14,2,4,0
+2025-02-15,Kerala,Thrissur,30.0,0.83,Foggy,0,15,2,5,1
+2025-02-16,Maharashtra,Aurangabad,11.0,0.43,Cloudy,0,16,2,6,1
+2025-02-17,Mizoram,Champhai,35.0,0.52,Sunny,0,17,2,0,0
+2025-02-18,West Bengal,Asansol,20.0,0.63,Foggy,0,18,2,1,0
+2025-02-19,Haryana,Gurugram,28.0,0.59,Sunny,0,19,2,2,0
+2025-02-20,Telangana,Khammam,18.0,0.41,Foggy,0,20,2,3,0
+2025-02-21,Meghalaya,Tura,24.0,0.72,Stormy,0,21,2,4,0
+2025-02-22,Punjab,Amritsar,15.0,0.45,Sunny,0,22,2,5,1
+2025-02-23,Uttar Pradesh,Varanasi,20.0,0.63,Stormy,0,23,2,6,1
+2025-02-24,Tamil Nadu,Chennai,27.0,0.82,Clear,0,24,2,0,0
+2025-02-25,Rajasthan,Udaipur,11.0,0.62,Stormy,0,25,2,1,0
+2025-02-26,Himachal Pradesh,Manali,32.0,0.4,Foggy,0,26,2,2,0
+2025-02-27,Sikkim,Mangan,17.0,0.54,Cloudy,0,27,2,3,0
+2025-02-28,Mizoram,Champhai,13.0,0.9,Foggy,0,28,2,4,0
+2025-03-01,Tripura,Amarpur,25.0,0.74,Cloudy,0,1,3,5,1
+2025-03-02,Andhra Pradesh,Vijayawada,24.0,0.62,Clear,0,2,3,6,1
+2025-03-03,Haryana,Chandigarh,34.0,0.41,Sunny,0,3,3,0,0
+2025-03-04,Bihar,Gaya,20.0,0.46,Clear,0,4,3,1,0
+2025-03-05,Nagaland,Dimapur,33.0,0.75,Rainy,0,5,3,2,0
+2025-03-06,Andhra Pradesh,Tirupati,14.0,0.65,Clear,0,6,3,3,0
+2025-03-07,Sikkim,Pakyong,28.0,0.9,Stormy,0,7,3,4,0
+2025-03-08,Uttar Pradesh,Kanpur,23.0,0.89,Foggy,0,8,3,5,1
+2025-03-09,Tripura,Udaipur,27.0,0.61,Clear,0,9,3,6,1
+2025-03-10,Goa,Panaji,14.0,0.49,Foggy,0,10,3,0,0
+2025-03-11,Uttar Pradesh,Varanasi,11.0,0.78,Rainy,0,11,3,1,0
+2025-03-12,Nagaland,Zunheboto,35.0,0.47,Rainy,0,12,3,2,0
+2025-03-13,Sikkim,Pakyong,28.0,0.54,Stormy,0,13,3,3,0
+2025-03-14,Telangana,Hyderabad,29.0,0.88,Stormy,0,14,3,4,0
+2025-03-15,Karnataka,Bangalore,32.0,0.46,Cloudy,0,15,3,5,1
+2025-03-16,Arunachal Pradesh,Pasighat,14.0,0.4,Stormy,0,16,3,6,1
+2025-03-17,Gujarat,Surat,25.0,0.42,Sunny,0,17,3,0,0
+2025-03-18,Rajasthan,Jodhpur,15.0,0.87,Rainy,0,18,3,1,0
+2025-03-19,Meghalaya,Jowai,29.0,0.82,Sunny,0,19,3,2,0
+2025-03-20,Telangana,Karimnagar,33.0,0.88,Foggy,0,20,3,3,0
+2025-03-21,Karnataka,Mangalore,27.0,0.8,Foggy,0,21,3,4,0
+2025-03-22,West Bengal,Asansol,23.0,0.63,Foggy,0,22,3,5,1
+2025-03-23,Karnataka,Belagavi,19.0,0.45,Foggy,0,23,3,6,1
+2025-03-24,West Bengal,Asansol,22.0,0.74,Stormy,0,24,3,0,0
+2025-03-25,Rajasthan,Udaipur,12.0,0.58,Stormy,0,25,3,1,0
+2025-03-26,Manipur,Imphal,29.0,0.56,Stormy,0,26,3,2,0
+2025-03-27,Gujarat,Vadodara,32.0,0.49,Rainy,0,27,3,3,0
+2025-03-28,Gujarat,Ahmedabad,31.0,0.55,Rainy,0,28,3,4,0
+2025-03-29,Karnataka,Bangalore,31.0,0.55,Stormy,0,29,3,5,1
+2025-03-30,Karnataka,Mysore,27.0,0.54,Clear,0,30,3,6,1
+2025-03-31,Haryana,Chandigarh,14.0,0.54,Stormy,0,31,3,0,0
+2025-04-01,West Bengal,Howrah,18.0,0.7,Cloudy,0,1,4,1,0
+2025-04-02,Tamil Nadu,Madurai,25.0,0.83,Foggy,0,2,4,2,0
+2025-04-03,Chhattisgarh,Raigarh,28.0,0.83,Foggy,0,3,4,3,0
+2025-04-04,Assam,Guwahati,27.0,0.49,Clear,0,4,4,4,0
+2025-04-05,Uttar Pradesh,Varanasi,17.0,0.57,Stormy,0,5,4,5,1
+2025-04-06,Odisha,Cuttack,25.0,0.58,Stormy,0,6,4,6,1
+2025-04-07,Jharkhand,Deoghar,29.0,0.56,Sunny,0,7,4,0,0
+2025-04-08,Kerala,Kottayam,24.0,0.52,Sunny,0,8,4,1,0
+2025-04-09,Chhattisgarh,Raipur,30.0,0.74,Rainy,0,9,4,2,0
+2025-04-10,Karnataka,Hubli,35.0,0.82,Foggy,0,10,4,3,0
+2025-04-11,Mizoram,Champhai,32.0,0.71,Cloudy,0,11,4,4,0
+2025-04-12,Andhra Pradesh,Kakinada,22.0,0.63,Sunny,0,12,4,5,1
+2025-04-13,Kerala,Thrissur,16.0,0.56,Cloudy,0,13,4,6,1
+2025-04-14,Bihar,Muzaffarpur,27.0,0.73,Cloudy,0,14,4,0,0
+2025-04-15,Haryana,Chandigarh,34.0,0.86,Clear,0,15,4,1,0
+2025-04-16,Uttarakhand,Rishikesh,22.0,0.64,Stormy,0,16,4,2,0
+2025-04-17,Chhattisgarh,Durg,31.0,0.67,Stormy,0,17,4,3,0
+2025-04-18,Goa,Mapusa,14.0,0.46,Clear,0,18,4,4,0
+2025-04-19,Goa,Panaji,20.0,0.72,Rainy,0,19,4,5,1
+2025-04-20,Andhra Pradesh,Guntur,15.0,0.88,Cloudy,0,20,4,6,1
+2025-04-21,Goa,Panaji,12.0,0.76,Clear,0,21,4,0,0
+2025-04-22,Nagaland,Dimapur,12.0,0.44,Sunny,0,22,4,1,0
+2025-04-23,Uttarakhand,Nainital,27.0,0.72,Foggy,0,23,4,2,0
+2025-04-24,Chhattisgarh,Raigarh,20.0,0.62,Cloudy,0,24,4,3,0
+2025-04-25,Bihar,Gaya,29.0,0.74,Stormy,0,25,4,4,0
+2025-04-26,Manipur,Imphal,35.0,0.58,Foggy,0,26,4,5,1
+2025-04-27,Nagaland,Kohima,21.0,0.51,Stormy,0,27,4,6,1
+2025-04-28,Telangana,Khammam,16.0,0.43,Sunny,0,28,4,0,0
+2025-04-29,Uttarakhand,Nainital,26.0,0.51,Clear,0,29,4,1,0
+2025-04-30,Sikkim,Pakyong,35.0,0.74,Rainy,0,30,4,2,0
+2025-05-01,Uttar Pradesh,Lucknow,26.0,0.45,Foggy,0,1,5,3,0
+2025-05-02,Madhya Pradesh,Jabalpur,33.0,0.73,Sunny,0,2,5,4,0
+2025-05-03,Meghalaya,Williamnagar,28.0,0.48,Clear,0,3,5,5,1
+2025-05-04,Madhya Pradesh,Gwalior,35.0,0.43,Cloudy,0,4,5,6,1
+2025-05-05,Uttar Pradesh,Agra,31.0,0.79,Cloudy,0,5,5,0,0
+2025-05-06,Mizoram,Serchhip,32.0,0.75,Stormy,0,6,5,1,0
+2025-05-07,Bihar,Muzaffarpur,18.0,0.68,Clear,0,7,5,2,0
+2025-05-08,Punjab,Ludhiana,16.0,0.77,Foggy,0,8,5,3,0
+2025-05-09,Manipur,Churachandpur,20.0,0.55,Cloudy,0,9,5,4,0
+2025-05-10,Tamil Nadu,Chennai,11.0,0.86,Stormy,0,10,5,5,1
+2025-05-11,Jharkhand,Deoghar,20.0,0.68,Cloudy,0,11,5,6,1
+2025-05-12,Uttarakhand,Rishikesh,32.0,0.6,Stormy,0,12,5,0,0
+2025-05-13,Uttarakhand,Nainital,13.0,0.55,Rainy,0,13,5,1,0
+2025-05-14,Karnataka,Mangalore,28.0,0.53,Rainy,0,14,5,2,0
+2025-05-15,Uttar Pradesh,Lucknow,35.0,0.89,Foggy,0,15,5,3,0
+2025-05-16,Madhya Pradesh,Gwalior,22.0,0.49,Cloudy,0,16,5,4,0
+2025-05-17,Nagaland,Kohima,16.0,0.73,Cloudy,0,17,5,5,1
+2025-05-18,Uttar Pradesh,Kanpur,21.0,0.72,Rainy,0,18,5,6,1
+2025-05-19,Mizoram,Champhai,16.0,0.46,Clear,0,19,5,0,0
+2025-05-20,Kerala,Kozhikode,28.0,0.71,Foggy,0,20,5,1,0
+2025-05-21,Karnataka,Hubli,23.0,0.87,Foggy,0,21,5,2,0
+2025-05-22,Mizoram,Kolasib,34.0,0.67,Sunny,0,22,5,3,0
+2025-05-23,Tripura,Udaipur,28.0,0.68,Cloudy,0,23,5,4,0
+2025-05-24,Jharkhand,Jamshedpur,12.0,0.46,Foggy,0,24,5,5,1
+2025-05-25,West Bengal,Asansol,32.0,0.55,Clear,0,25,5,6,1
+2025-05-26,Madhya Pradesh,Bhopal,12.0,0.9,Rainy,0,26,5,0,0
+2025-05-27,Telangana,Hyderabad,32.0,0.43,Clear,0,27,5,1,0
+2025-05-28,Meghalaya,Jowai,12.0,0.73,Clear,0,28,5,2,0
+2025-05-29,Karnataka,Bangalore,27.0,0.9,Foggy,0,29,5,3,0
+2025-05-30,Goa,Panaji,22.0,0.42,Foggy,0,30,5,4,0
+2025-05-31,Chhattisgarh,Durg,15.0,0.49,Stormy,0,31,5,5,1
+2025-06-01,West Bengal,Asansol,30.0,0.86,Stormy,0,1,6,6,1
+2025-06-02,Tamil Nadu,Salem,31.0,0.56,Cloudy,0,2,6,0,0
+2025-06-03,Maharashtra,Mumbai,25.0,0.58,Stormy,0,3,6,1,0
+2025-06-04,Maharashtra,Nagpur,25.0,0.46,Sunny,0,4,6,2,0
+2025-06-05,Goa,Margao,24.0,0.69,Rainy,0,5,6,3,0
+2025-06-06,Maharashtra,Pune,22.0,0.64,Cloudy,0,6,6,4,0
+2025-06-07,Gujarat,Bhavnagar,21.0,0.72,Sunny,0,7,6,5,1
+2025-06-08,Assam,Dibrugarh,27.0,0.76,Stormy,0,8,6,6,1
+2025-06-09,Chhattisgarh,Raigarh,21.0,0.6,Stormy,0,9,6,0,0
+2025-06-10,Manipur,Imphal,16.0,0.58,Cloudy,0,10,6,1,0
+2025-06-11,Kerala,Kochi,27.0,0.52,Cloudy,0,11,6,2,0
+2025-06-12,Himachal Pradesh,Shimla,25.0,0.58,Foggy,0,12,6,3,0
+2025-06-13,Maharashtra,Nashik,24.0,0.74,Sunny,0,13,6,4,0
+2025-06-14,Punjab,Ludhiana,33.0,0.8,Sunny,0,14,6,5,1
+2025-06-15,Telangana,Warangal,10.0,0.85,Stormy,0,15,6,6,1
+2025-06-16,Sikkim,Mangan,25.0,0.48,Cloudy,0,16,6,0,0
+2025-06-17,Manipur,Churachandpur,32.0,0.46,Stormy,0,17,6,1,0
+2025-06-18,Maharashtra,Aurangabad,13.0,0.52,Clear,0,18,6,2,0
+2025-06-19,Karnataka,Mysore,33.0,0.48,Clear,0,19,6,3,0
+2025-06-20,Uttar Pradesh,Kanpur,10.0,0.71,Foggy,0,20,6,4,0
+2025-06-21,Arunachal Pradesh,Pasighat,34.0,0.44,Cloudy,0,21,6,5,1
+2025-06-22,Tripura,Udaipur,31.0,0.74,Clear,0,22,6,6,1
+2025-06-23,Kerala,Kochi,34.0,0.78,Rainy,0,23,6,0,0
+2025-06-24,Bihar,Gaya,26.0,0.44,Sunny,0,24,6,1,0
+2025-06-25,Meghalaya,Williamnagar,16.0,0.57,Clear,0,25,6,2,0
+2025-06-26,Tamil Nadu,Coimbatore,19.0,0.62,Clear,0,26,6,3,0
+2025-06-27,Madhya Pradesh,Indore,24.0,0.56,Rainy,0,27,6,4,0
+2025-06-28,Bihar,Gaya,29.0,0.87,Cloudy,0,28,6,5,1
+2025-06-29,Andhra Pradesh,Tirupati,23.0,0.5,Cloudy,0,29,6,6,1
+2025-06-30,Kerala,Thiruvananthapuram,33.0,0.61,Clear,0,30,6,0,0
+2025-07-01,Chhattisgarh,Durg,16.0,0.45,Stormy,0,1,7,1,0
+2025-07-02,Madhya Pradesh,Indore,12.0,0.8,Stormy,0,2,7,2,0
+2025-07-03,Jharkhand,Dhanbad,12.0,0.61,Clear,0,3,7,3,0
+2025-07-04,Maharashtra,Aurangabad,30.0,0.56,Rainy,0,4,7,4,0
+2025-07-05,Chhattisgarh,Korba,32.0,0.53,Clear,0,5,7,5,1
+2025-07-06,Himachal Pradesh,Solan,30.0,0.66,Sunny,0,6,7,6,1
+2025-07-07,Tamil Nadu,Chennai,15.0,0.75,Cloudy,0,7,7,0,0
+2025-07-08,Arunachal Pradesh,Ziro,14.0,0.5,Stormy,0,8,7,1,0
+2025-07-09,Odisha,Sambalpur,15.0,0.65,Stormy,0,9,7,2,0
+2025-07-10,Tripura,Amarpur,29.0,0.49,Cloudy,0,10,7,3,0
+2025-07-11,Kerala,Kottayam,13.0,0.66,Clear,0,11,7,4,0
+2025-07-12,Odisha,Sambalpur,32.0,0.42,Clear,0,12,7,5,1
+2025-07-13,Rajasthan,Kota,21.0,0.65,Cloudy,0,13,7,6,1
+2025-07-14,Manipur,Imphal,33.0,0.57,Sunny,0,14,7,0,0
+2025-07-15,Gujarat,Surat,32.0,0.47,Cloudy,0,15,7,1,0
+2025-07-16,Rajasthan,Jodhpur,11.0,0.42,Stormy,0,16,7,2,0
+2025-07-17,Karnataka,Mysore,14.0,0.48,Clear,0,17,7,3,0
+2025-07-18,Meghalaya,Shillong,31.0,0.47,Clear,0,18,7,4,0
+2025-07-19,Assam,Tinsukia,26.0,0.7,Cloudy,0,19,7,5,1
+2025-07-20,Tripura,Belonia,27.0,0.76,Clear,0,20,7,6,1
+2025-07-21,Gujarat,Vadodara,18.0,0.63,Sunny,0,21,7,0,0
+2025-07-22,Jharkhand,Dhanbad,34.0,0.69,Sunny,0,22,7,1,0
+2025-07-23,Mizoram,Aizawl,30.0,0.47,Cloudy,0,23,7,2,0
+2025-07-24,Maharashtra,Pune,13.0,0.45,Stormy,0,24,7,3,0
+2025-07-25,Uttar Pradesh,Agra,15.0,0.63,Sunny,0,25,7,4,0
+2025-07-26,Telangana,Khammam,16.0,0.67,Stormy,0,26,7,5,1
+2025-07-27,West Bengal,Kolkata,32.0,0.64,Cloudy,0,27,7,6,1
+2025-07-28,Chhattisgarh,Bilaspur,23.0,0.45,Rainy,0,28,7,0,0
+2025-07-29,Nagaland,Zunheboto,16.0,0.83,Stormy,0,29,7,1,0
+2025-07-30,Tripura,Amarpur,10.0,0.65,Stormy,0,30,7,2,0
+2025-07-31,Jharkhand,Dhanbad,13.0,0.73,Sunny,0,31,7,3,0
+2025-08-01,Bihar,Muzaffarpur,23.0,0.66,Foggy,0,1,8,4,0
+2025-08-02,Mizoram,Serchhip,15.0,0.67,Cloudy,0,2,8,5,1
+2025-08-03,Telangana,Nizamabad,35.0,0.5,Foggy,0,3,8,6,1
+2025-08-04,Uttar Pradesh,Meerut,32.0,0.44,Foggy,0,4,8,0,0
+2025-08-05,Assam,Guwahati,11.0,0.59,Sunny,0,5,8,1,0
+2025-08-06,Kerala,Thiruvananthapuram,25.0,0.54,Stormy,0,6,8,2,0
+2025-08-07,Chhattisgarh,Korba,14.0,0.59,Clear,0,7,8,3,0
+2025-08-08,Assam,Guwahati,35.0,0.8,Clear,0,8,8,4,0
+2025-08-09,Chhattisgarh,Durg,32.0,0.57,Foggy,0,9,8,5,1
+2025-08-10,Sikkim,Mangan,21.0,0.82,Clear,0,10,8,6,1
+2025-08-11,Meghalaya,Shillong,19.0,0.46,Clear,0,11,8,0,0
+2025-08-12,Chhattisgarh,Durg,31.0,0.8,Cloudy,0,12,8,1,0
+2025-08-13,Himachal Pradesh,Dharamsala,23.0,0.76,Clear,0,13,8,2,0
+2025-08-14,Maharashtra,Aurangabad,18.0,0.79,Sunny,0,14,8,3,0
+2025-08-15,Maharashtra,Mumbai,12.0,0.75,Cloudy,0,15,8,4,0
+2025-08-16,Punjab,Jalandhar,27.0,0.68,Foggy,0,16,8,5,1
+2025-08-17,Jharkhand,Jamshedpur,18.0,0.43,Cloudy,0,17,8,6,1
+2025-08-18,Himachal Pradesh,Shimla,24.0,0.67,Cloudy,0,18,8,0,0
+2025-08-19,Tamil Nadu,Trichy,25.0,0.8,Sunny,0,19,8,1,0
+2025-08-20,Assam,Guwahati,21.0,0.43,Cloudy,0,20,8,2,0
+2025-08-21,Himachal Pradesh,Solan,35.0,0.57,Foggy,0,21,8,3,0
+2025-08-22,Manipur,Imphal,27.0,0.78,Foggy,0,22,8,4,0
+2025-08-23,Punjab,Jalandhar,19.0,0.58,Sunny,0,23,8,5,1
+2025-08-24,Madhya Pradesh,Ujjain,27.0,0.55,Stormy,0,24,8,6,1
+2025-08-25,Odisha,Cuttack,11.0,0.6,Foggy,0,25,8,0,0
+2025-08-26,Karnataka,Bangalore,22.0,0.8,Rainy,0,26,8,1,0
+2025-08-27,Sikkim,Pakyong,14.0,0.45,Clear,0,27,8,2,0
+2025-08-28,Chhattisgarh,Raigarh,27.0,0.62,Cloudy,0,28,8,3,0
+2025-08-29,Bihar,Darbhanga,33.0,0.54,Sunny,0,29,8,4,0
+2025-08-30,Odisha,Berhampur,13.0,0.54,Clear,0,30,8,5,1
+2025-08-31,Arunachal Pradesh,Itanagar,17.0,0.69,Sunny,0,31,8,6,1
+2025-09-01,Assam,Dibrugarh,11.0,0.47,Foggy,0,1,9,0,0
+2025-09-02,Mizoram,Champhai,34.0,0.68,Sunny,0,2,9,1,0
+2025-09-03,Arunachal Pradesh,Pasighat,19.0,0.42,Stormy,0,3,9,2,0
+2025-09-04,Kerala,Kochi,25.0,0.48,Rainy,0,4,9,3,0
+2025-09-05,Gujarat,Vadodara,13.0,0.69,Clear,0,5,9,4,0
+2025-09-06,Bihar,Patna,33.0,0.54,Foggy,0,6,9,5,1
+2025-09-07,Uttar Pradesh,Varanasi,12.0,0.46,Stormy,0,7,9,6,1
+2025-09-08,Punjab,Ludhiana,32.0,0.5,Rainy,0,8,9,0,0
+2025-09-09,Chhattisgarh,Raigarh,17.0,0.86,Rainy,0,9,9,1,0
+2025-09-10,Meghalaya,Tura,17.0,0.57,Clear,0,10,9,2,0
+2025-09-11,Andhra Pradesh,Vijayawada,26.0,0.85,Stormy,0,11,9,3,0
+2025-09-12,Mizoram,Lunglei,13.0,0.86,Cloudy,0,12,9,4,0
+2025-09-13,Tripura,Amarpur,23.0,0.42,Rainy,0,13,9,5,1
+2025-09-14,Assam,Dibrugarh,31.0,0.64,Foggy,0,14,9,6,1
+2025-09-15,Odisha,Cuttack,12.0,0.4,Foggy,0,15,9,0,0
+2025-09-16,Tripura,Udaipur,31.0,0.44,Cloudy,0,16,9,1,0
+2025-09-17,Kerala,Kozhikode,33.0,0.77,Foggy,0,17,9,2,0
+2025-09-18,Gujarat,Bhavnagar,24.0,0.69,Cloudy,0,18,9,3,0
+2025-09-19,Jharkhand,Deoghar,14.0,0.8,Stormy,0,19,9,4,0
+2025-09-20,Gujarat,Bhavnagar,13.0,0.85,Foggy,0,20,9,5,1
+2025-09-21,Gujarat,Ahmedabad,34.0,0.49,Foggy,0,21,9,6,1
+2025-09-22,Uttar Pradesh,Kanpur,29.0,0.77,Rainy,0,22,9,0,0
+2025-09-23,Karnataka,Belagavi,32.0,0.73,Sunny,0,23,9,1,0
+2025-09-24,Tamil Nadu,Trichy,25.0,0.68,Sunny,0,24,9,2,0
+2025-09-25,Chhattisgarh,Raipur,12.0,0.6,Sunny,0,25,9,3,0
+2025-09-26,Kerala,Kottayam,30.0,0.64,Foggy,0,26,9,4,0
+2025-09-27,Arunachal Pradesh,Tawang,25.0,0.4,Rainy,0,27,9,5,1
+2025-09-28,Haryana,Chandigarh,17.0,0.85,Cloudy,0,28,9,6,1
+2025-09-29,Arunachal Pradesh,Pasighat,18.0,0.65,Foggy,0,29,9,0,0
+2025-09-30,Punjab,Patiala,33.0,0.58,Rainy,0,30,9,1,0
+2025-10-01,Rajasthan,Ajmer,27.0,0.43,Rainy,0,1,10,2,0
+2025-10-02,Tamil Nadu,Trichy,20.0,0.54,Foggy,0,2,10,3,0
+2025-10-03,Sikkim,Namchi,14.0,0.82,Clear,0,3,10,4,0
+2025-10-04,Goa,Margao,14.0,0.62,Stormy,0,4,10,5,1
+2025-10-05,Kerala,Thiruvananthapuram,26.0,0.56,Sunny,0,5,10,6,1
+2025-10-06,Bihar,Muzaffarpur,13.0,0.64,Foggy,0,6,10,0,0
+2025-10-07,Kerala,Kochi,23.0,0.68,Stormy,0,7,10,1,0
+2025-10-08,Mizoram,Aizawl,16.0,0.69,Cloudy,0,8,10,2,0
+2025-10-09,Rajasthan,Kota,33.0,0.49,Cloudy,0,9,10,3,0
+2025-10-10,Mizoram,Serchhip,13.0,0.43,Clear,0,10,10,4,0
+2025-10-11,Assam,Dibrugarh,24.0,0.77,Sunny,0,11,10,5,1
+2025-10-12,Nagaland,Zunheboto,19.0,0.85,Cloudy,0,12,10,6,1
+2025-10-13,Meghalaya,Nongstoin,12.0,0.79,Foggy,0,13,10,0,0
+2025-10-14,Rajasthan,Udaipur,19.0,0.66,Stormy,0,14,10,1,0
+2025-10-15,Punjab,Jalandhar,29.0,0.72,Sunny,0,15,10,2,0
+2025-10-16,Sikkim,Pakyong,24.0,0.62,Foggy,0,16,10,3,0
+2025-10-17,Manipur,Thoubal,30.0,0.54,Rainy,0,17,10,4,0
+2025-10-18,Maharashtra,Mumbai,33.0,0.76,Foggy,0,18,10,5,1
+2025-10-19,Chhattisgarh,Durg,21.0,0.62,Foggy,0,19,10,6,1
+2025-10-20,Sikkim,Pakyong,20.0,0.41,Sunny,0,20,10,0,0
+2025-10-21,Chhattisgarh,Korba,33.0,0.57,Sunny,0,21,10,1,0
+2025-10-22,Jharkhand,Deoghar,10.0,0.52,Sunny,0,22,10,2,0
+2025-10-23,Uttarakhand,Roorkee,21.0,0.48,Rainy,0,23,10,3,0
+2025-10-24,Sikkim,Mangan,10.0,0.43,Rainy,0,24,10,4,0
+2025-10-25,Haryana,Ambala,31.0,0.49,Stormy,0,25,10,5,1
+2025-10-26,Nagaland,Dimapur,22.0,0.67,Foggy,0,26,10,6,1
+2025-10-27,Arunachal Pradesh,Ziro,32.0,0.86,Sunny,0,27,10,0,0
+2025-10-28,Rajasthan,Jaipur,18.0,0.9,Cloudy,0,28,10,1,0
+2025-10-29,Chhattisgarh,Raipur,11.0,0.87,Rainy,0,29,10,2,0
+2025-10-30,Punjab,Chandigarh,28.0,0.76,Foggy,0,30,10,3,0
+2025-10-31,Arunachal Pradesh,Aalo,15.0,0.47,Stormy,0,31,10,4,0
+2025-11-01,Punjab,Patiala,23.0,0.74,Foggy,0,1,11,5,1
+2025-11-02,Haryana,Gurugram,15.0,0.88,Rainy,0,2,11,6,1
+2025-11-03,Goa,Vasco da Gama,33.0,0.42,Foggy,0,3,11,0,0
+2025-11-04,Tamil Nadu,Chennai,23.0,0.53,Stormy,0,4,11,1,0
+2025-11-05,Odisha,Rourkela,21.0,0.69,Stormy,0,5,11,2,0
+2025-11-06,Odisha,Berhampur,28.0,0.82,Foggy,0,6,11,3,0
+2025-11-07,Goa,Ponda,20.0,0.53,Stormy,0,7,11,4,0
+2025-11-08,Tripura,Udaipur,20.0,0.76,Clear,0,8,11,5,1
+2025-11-09,Manipur,Jiribam,26.0,0.48,Cloudy,0,9,11,6,1
+2025-11-10,Sikkim,Mangan,29.0,0.49,Clear,0,10,11,0,0
+2025-11-11,Meghalaya,Shillong,23.0,0.76,Sunny,0,11,11,1,0
+2025-11-12,Uttarakhand,Haridwar,16.0,0.83,Rainy,0,12,11,2,0
+2025-11-13,Gujarat,Ahmedabad,12.0,0.89,Sunny,0,13,11,3,0
+2025-11-14,Arunachal Pradesh,Itanagar,10.0,0.42,Foggy,0,14,11,4,0
+2025-11-15,Goa,Panaji,12.0,0.41,Rainy,0,15,11,5,1
+2025-11-16,Odisha,Sambalpur,18.0,0.59,Sunny,0,16,11,6,1
+2025-11-17,Tamil Nadu,Madurai,18.0,0.66,Cloudy,0,17,11,0,0
+2025-11-18,Arunachal Pradesh,Tawang,10.0,0.88,Cloudy,0,18,11,1,0
+2025-11-19,Telangana,Khammam,12.0,0.82,Sunny,0,19,11,2,0
+2025-11-20,Goa,Ponda,28.0,0.49,Foggy,0,20,11,3,0
+2025-11-21,West Bengal,Kolkata,21.0,0.88,Clear,0,21,11,4,0
+2025-11-22,Bihar,Bhagalpur,19.0,0.82,Clear,0,22,11,5,1
+2025-11-23,Rajasthan,Ajmer,20.0,0.73,Cloudy,0,23,11,6,1
+2025-11-24,Tamil Nadu,Coimbatore,12.0,0.63,Sunny,0,24,11,0,0
+2025-11-25,Rajasthan,Ajmer,33.0,0.83,Rainy,0,25,11,1,0
+2025-11-26,Odisha,Berhampur,25.0,0.48,Foggy,0,26,11,2,0
+2025-11-27,Maharashtra,Nashik,30.0,0.88,Sunny,0,27,11,3,0
+2025-11-28,Rajasthan,Udaipur,13.0,0.9,Clear,0,28,11,4,0
+2025-11-29,Gujarat,Vadodara,13.0,0.75,Cloudy,0,29,11,5,1
+2025-11-30,Maharashtra,Nagpur,26.0,0.72,Clear,0,30,11,6,1
+2025-12-01,Uttarakhand,Nainital,10.0,0.46,Sunny,0,1,12,0,0
+2025-12-02,Mizoram,Aizawl,18.0,0.52,Rainy,0,2,12,1,0
+2025-12-03,Andhra Pradesh,Guntur,25.0,0.6,Foggy,0,3,12,2,0
+2025-12-04,Tripura,Dharmanagar,10.0,0.86,Stormy,0,4,12,3,0
+2025-12-05,Gujarat,Rajkot,26.0,0.89,Stormy,0,5,12,4,0
+2025-12-06,Bihar,Patna,34.0,0.67,Clear,0,6,12,5,1
+2025-12-07,Andhra Pradesh,Guntur,19.0,0.79,Stormy,0,7,12,6,1
+2025-12-08,Mizoram,Champhai,18.0,0.56,Foggy,0,8,12,0,0
+2025-12-09,Telangana,Nizamabad,29.0,0.57,Stormy,0,9,12,1,0
+2025-12-10,Kerala,Thrissur,18.0,0.87,Rainy,0,10,12,2,0
+2025-12-11,Tamil Nadu,Coimbatore,32.0,0.64,Rainy,0,11,12,3,0
+2025-12-12,Rajasthan,Udaipur,19.0,0.58,Clear,0,12,12,4,0
+2025-12-13,Bihar,Gaya,21.0,0.76,Cloudy,0,13,12,5,1
+2025-12-14,Kerala,Kozhikode,10.0,0.53,Clear,0,14,12,6,1
+2025-12-15,Uttarakhand,Haridwar,32.0,0.65,Foggy,0,15,12,0,0
+2025-12-16,Gujarat,Bhavnagar,29.0,0.82,Stormy,0,16,12,1,0
+2025-12-17,Arunachal Pradesh,Pasighat,28.0,0.87,Clear,0,17,12,2,0
+2025-12-18,West Bengal,Asansol,12.0,0.64,Foggy,0,18,12,3,0
+2025-12-19,Nagaland,Kohima,21.0,0.64,Stormy,0,19,12,4,0
+2025-12-20,Arunachal Pradesh,Ziro,29.0,0.41,Cloudy,0,20,12,5,1
+2025-12-21,Madhya Pradesh,Gwalior,27.0,0.68,Sunny,0,21,12,6,1
+2025-12-22,Uttarakhand,Dehradun,18.0,0.54,Sunny,0,22,12,0,0
+2025-12-23,Meghalaya,Williamnagar,13.0,0.45,Foggy,0,23,12,1,0
+2025-12-24,Tripura,Agartala,22.0,0.42,Foggy,0,24,12,2,0
+2025-12-25,Uttar Pradesh,Varanasi,25.0,0.82,Rainy,0,25,12,3,0
+2025-12-26,Sikkim,Mangan,32.0,0.62,Sunny,0,26,12,4,0
+2025-12-27,Nagaland,Kohima,26.0,0.42,Stormy,0,27,12,5,1
+2025-12-28,Kerala,Kochi,11.0,0.87,Rainy,0,28,12,6,1
+2025-12-29,Sikkim,Mangan,29.0,0.8,Clear,0,29,12,0,0
+2025-12-30,West Bengal,Kolkata,23.0,0.73,Rainy,0,30,12,1,0
+2025-12-31,Haryana,Gurugram,23.0,0.4,Cloudy,0,31,12,2,0
+2026-01-01,Mizoram,Aizawl,35.0,0.48,Cloudy,0,1,1,3,0
+2026-01-02,Maharashtra,Pune,28.0,0.62,Sunny,0,2,1,4,0
+2026-01-03,Meghalaya,Jowai,19.0,0.51,Stormy,0,3,1,5,1
+2026-01-04,Jharkhand,Dhanbad,20.0,0.84,Cloudy,0,4,1,6,1
+2026-01-05,Mizoram,Champhai,12.0,0.53,Rainy,0,5,1,0,0
+2026-01-06,Chhattisgarh,Bilaspur,26.0,0.64,Foggy,0,6,1,1,0
+2026-01-07,Jharkhand,Jamshedpur,16.0,0.63,Sunny,0,7,1,2,0
+2026-01-08,Manipur,Churachandpur,24.0,0.55,Stormy,0,8,1,3,0
+2026-01-09,Madhya Pradesh,Gwalior,15.0,0.45,Sunny,0,9,1,4,0
+2026-01-10,Bihar,Patna,22.0,0.67,Foggy,0,10,1,5,1
+2026-01-11,Meghalaya,Nongstoin,17.0,0.79,Foggy,0,11,1,6,1
+2026-01-12,Arunachal Pradesh,Aalo,15.0,0.4,Stormy,0,12,1,0,0
+2026-01-13,Gujarat,Ahmedabad,17.0,0.49,Clear,0,13,1,1,0
+2026-01-14,Kerala,Kottayam,11.0,0.57,Foggy,0,14,1,2,0
+2026-01-15,Jharkhand,Dhanbad,34.0,0.82,Stormy,0,15,1,3,0
+2026-01-16,Jharkhand,Bokaro,34.0,0.8,Sunny,0,16,1,4,0
+2026-01-17,Telangana,Warangal,35.0,0.49,Clear,0,17,1,5,1
+2026-01-18,Manipur,Imphal,20.0,0.67,Rainy,0,18,1,6,1
+2026-01-19,Rajasthan,Jaipur,32.0,0.46,Sunny,0,19,1,0,0
+2026-01-20,Andhra Pradesh,Guntur,14.0,0.42,Clear,0,20,1,1,0
+2026-01-21,Mizoram,Serchhip,11.0,0.57,Rainy,0,21,1,2,0
+2026-01-22,Chhattisgarh,Raigarh,11.0,0.54,Sunny,0,22,1,3,0
+2026-01-23,Andhra Pradesh,Vijayawada,35.0,0.78,Clear,0,23,1,4,0
+2026-01-24,Odisha,Bhubaneswar,35.0,0.89,Foggy,0,24,1,5,1
+2026-01-25,Odisha,Rourkela,32.0,0.57,Clear,0,25,1,6,1
+2026-01-26,Andhra Pradesh,Visakhapatnam,31.0,0.79,Foggy,0,26,1,0,0
+2026-01-27,Rajasthan,Udaipur,18.0,0.66,Foggy,0,27,1,1,0
+2026-01-28,Odisha,Cuttack,18.0,0.52,Clear,0,28,1,2,0
+2026-01-29,Mizoram,Aizawl,24.0,0.64,Stormy,0,29,1,3,0
+2026-01-30,Rajasthan,Kota,19.0,0.44,Stormy,0,30,1,4,0
+2026-01-31,Meghalaya,Shillong,31.0,0.63,Foggy,0,31,1,5,1
+2026-02-01,Bihar,Patna,20.0,0.86,Cloudy,0,1,2,6,1
+2026-02-02,Manipur,Kakching,13.0,0.7,Cloudy,0,2,2,0,0
+2026-02-03,Telangana,Nizamabad,35.0,0.82,Foggy,0,3,2,1,0
+2026-02-04,Sikkim,Jorethang,16.0,0.68,Cloudy,0,4,2,2,0
+2026-02-05,Jharkhand,Dhanbad,16.0,0.43,Foggy,0,5,2,3,0
+2026-02-06,Tamil Nadu,Madurai,11.0,0.79,Stormy,0,6,2,4,0
+2026-02-07,Assam,Guwahati,28.0,0.62,Clear,0,7,2,5,1
+2026-02-08,Arunachal Pradesh,Aalo,17.0,0.89,Cloudy,0,8,2,6,1
+2026-02-09,Nagaland,Kohima,17.0,0.88,Rainy,0,9,2,0,0
+2026-02-10,Uttar Pradesh,Lucknow,13.0,0.84,Cloudy,0,10,2,1,0
+2026-02-11,Sikkim,Gangtok,32.0,0.66,Sunny,0,11,2,2,0
+2026-02-12,Uttarakhand,Nainital,24.0,0.81,Rainy,0,12,2,3,0
+2026-02-13,Andhra Pradesh,Tirupati,33.0,0.52,Foggy,0,13,2,4,0
+2026-02-14,Himachal Pradesh,Solan,11.0,0.44,Sunny,0,14,2,5,1
+2026-02-15,Tripura,Belonia,20.0,0.53,Rainy,0,15,2,6,1
+2026-02-16,Goa,Mapusa,28.0,0.48,Sunny,0,16,2,0,0
+2026-02-17,Assam,Guwahati,22.0,0.74,Sunny,0,17,2,1,0
+2026-02-18,Manipur,Churachandpur,34.0,0.57,Foggy,0,18,2,2,0
+2026-02-19,Tamil Nadu,Madurai,32.0,0.66,Cloudy,0,19,2,3,0
+2026-02-20,Nagaland,Kohima,12.0,0.43,Foggy,0,20,2,4,0
+2026-02-21,Karnataka,Belagavi,30.0,0.56,Stormy,0,21,2,5,1
+2026-02-22,Goa,Mapusa,27.0,0.56,Cloudy,0,22,2,6,1
+2026-02-23,Arunachal Pradesh,Pasighat,20.0,0.85,Sunny,0,23,2,0,0
+2026-02-24,Nagaland,Tuensang,22.0,0.69,Rainy,0,24,2,1,0
+2026-02-25,Punjab,Patiala,23.0,0.49,Cloudy,0,25,2,2,0
+2026-02-26,Gujarat,Ahmedabad,16.0,0.65,Stormy,0,26,2,3,0
+2026-02-27,Mizoram,Champhai,13.0,0.73,Cloudy,0,27,2,4,0
+2026-02-28,Tamil Nadu,Madurai,27.0,0.45,Stormy,0,28,2,5,1
+2026-03-01,Karnataka,Mysore,21.0,0.82,Cloudy,0,1,3,6,1
+2026-03-02,Bihar,Bhagalpur,16.0,0.7,Rainy,0,2,3,0,0
+2026-03-03,Arunachal Pradesh,Itanagar,34.0,0.82,Sunny,0,3,3,1,0
+2026-03-04,Tripura,Udaipur,33.0,0.61,Rainy,0,4,3,2,0
+2026-03-05,Odisha,Bhubaneswar,14.0,0.71,Stormy,0,5,3,3,0
+2026-03-06,Arunachal Pradesh,Pasighat,16.0,0.42,Clear,0,6,3,4,0
+2026-03-07,Meghalaya,Nongstoin,28.0,0.66,Foggy,0,7,3,5,1
+2026-03-08,Uttar Pradesh,Kanpur,25.0,0.74,Foggy,0,8,3,6,1
+2026-03-09,Nagaland,Tuensang,20.0,0.86,Foggy,0,9,3,0,0
+2026-03-10,Uttar Pradesh,Lucknow,17.0,0.52,Clear,0,10,3,1,0
+2026-03-11,Arunachal Pradesh,Aalo,11.0,0.58,Foggy,0,11,3,2,0
+2026-03-12,Arunachal Pradesh,Ziro,26.0,0.45,Sunny,0,12,3,3,0
+2026-03-13,Jharkhand,Bokaro,24.0,0.8,Stormy,0,13,3,4,0
+2026-03-14,Jharkhand,Ranchi,21.0,0.45,Sunny,0,14,3,5,1
+2026-03-15,Andhra Pradesh,Kakinada,23.0,0.72,Stormy,0,15,3,6,1
+2026-03-16,Manipur,Jiribam,30.0,0.87,Foggy,0,16,3,0,0
+2026-03-17,Uttar Pradesh,Varanasi,33.0,0.83,Stormy,0,17,3,1,0
+2026-03-18,Manipur,Kakching,35.0,0.89,Stormy,0,18,3,2,0
+2026-03-19,West Bengal,Asansol,13.0,0.61,Cloudy,0,19,3,3,0
+2026-03-20,Goa,Mapusa,14.0,0.82,Cloudy,0,20,3,4,0
+2026-03-21,Manipur,Imphal,34.0,0.85,Rainy,0,21,3,5,1
+2026-03-22,Rajasthan,Jodhpur,35.0,0.87,Rainy,0,22,3,6,1
+2026-03-23,Meghalaya,Tura,35.0,0.56,Sunny,0,23,3,0,0
+2026-03-24,Assam,Dibrugarh,30.0,0.57,Sunny,0,24,3,1,0
+2026-03-25,Meghalaya,Williamnagar,24.0,0.66,Sunny,0,25,3,2,0
+2026-03-26,Punjab,Ludhiana,29.0,0.68,Stormy,0,26,3,3,0
+2026-03-27,Telangana,Warangal,20.0,0.54,Stormy,0,27,3,4,0
+2026-03-28,Uttar Pradesh,Agra,22.0,0.78,Clear,0,28,3,5,1
+2026-03-29,Haryana,Chandigarh,33.0,0.83,Cloudy,0,29,3,6,1
+2026-03-30,Mizoram,Champhai,23.0,0.6,Rainy,0,30,3,0,0
+2026-03-31,Rajasthan,Kota,35.0,0.41,Foggy,0,31,3,1,0
+2026-04-01,Odisha,Berhampur,17.0,0.41,Clear,0,1,4,2,0
+2026-04-02,Kerala,Kozhikode,33.0,0.56,Foggy,0,2,4,3,0
+2026-04-03,Karnataka,Mangalore,24.0,0.67,Foggy,0,3,4,4,0
+2026-04-04,Gujarat,Bhavnagar,17.0,0.79,Clear,0,4,4,5,1
+2026-04-05,Himachal Pradesh,Dharamsala,31.0,0.49,Rainy,0,5,4,6,1
+2026-04-06,Arunachal Pradesh,Aalo,31.0,0.41,Sunny,0,6,4,0,0
+2026-04-07,Madhya Pradesh,Indore,17.0,0.81,Cloudy,0,7,4,1,0
+2026-04-08,Bihar,Bhagalpur,23.0,0.49,Rainy,0,8,4,2,0
+2026-04-09,Meghalaya,Williamnagar,25.0,0.4,Stormy,0,9,4,3,0
+2026-04-10,Punjab,Amritsar,34.0,0.7,Stormy,0,10,4,4,0
+2026-04-11,Kerala,Thrissur,16.0,0.43,Cloudy,0,11,4,5,1
+2026-04-12,Odisha,Sambalpur,27.0,0.46,Sunny,0,12,4,6,1
+2026-04-13,Haryana,Ambala,12.0,0.6,Sunny,0,13,4,0,0
+2026-04-14,Arunachal Pradesh,Tawang,20.0,0.43,Sunny,0,14,4,1,0
+2026-04-15,Odisha,Rourkela,14.0,0.86,Stormy,0,15,4,2,0
+2026-04-16,Punjab,Chandigarh,16.0,0.42,Clear,0,16,4,3,0
+2026-04-17,Mizoram,Lunglei,16.0,0.43,Foggy,0,17,4,4,0
+2026-04-18,Tamil Nadu,Salem,30.0,0.56,Cloudy,0,18,4,5,1
+2026-04-19,Assam,Tinsukia,10.0,0.72,Sunny,0,19,4,6,1
+2026-04-20,Goa,Vasco da Gama,31.0,0.45,Stormy,0,20,4,0,0
+2026-04-21,Odisha,Berhampur,32.0,0.73,Foggy,0,21,4,1,0
+2026-04-22,Goa,Mapusa,23.0,0.75,Cloudy,0,22,4,2,0
+2026-04-23,Madhya Pradesh,Gwalior,33.0,0.51,Cloudy,0,23,4,3,0
+2026-04-24,Haryana,Ambala,33.0,0.72,Clear,0,24,4,4,0
+2026-04-25,Goa,Panaji,19.0,0.61,Sunny,0,25,4,5,1
+2026-04-26,Chhattisgarh,Raigarh,15.0,0.52,Cloudy,0,26,4,6,1
+2026-04-27,Karnataka,Hubli,10.0,0.42,Stormy,0,27,4,0,0
+2026-04-28,Rajasthan,Ajmer,35.0,0.64,Foggy,0,28,4,1,0
+2026-04-29,Andhra Pradesh,Kakinada,11.0,0.6,Clear,0,29,4,2,0
+2026-04-30,Assam,Jorhat,28.0,0.77,Foggy,0,30,4,3,0
+2026-05-01,Meghalaya,Nongstoin,29.0,0.46,Stormy,0,1,5,4,0
+2026-05-02,Himachal Pradesh,Manali,24.0,0.49,Cloudy,0,2,5,5,1
+2026-05-03,Manipur,Kakching,35.0,0.74,Clear,0,3,5,6,1
+2026-05-04,Assam,Dibrugarh,14.0,0.76,Cloudy,0,4,5,0,0
+2026-05-05,Assam,Tinsukia,13.0,0.4,Rainy,0,5,5,1,0
+2026-05-06,Uttarakhand,Dehradun,26.0,0.62,Foggy,0,6,5,2,0
+2026-05-07,Madhya Pradesh,Indore,35.0,0.5,Stormy,0,7,5,3,0
+2026-05-08,Chhattisgarh,Raigarh,14.0,0.69,Foggy,0,8,5,4,0
+2026-05-09,West Bengal,Howrah,13.0,0.79,Sunny,0,9,5,5,1
+2026-05-10,Sikkim,Gangtok,32.0,0.49,Cloudy,0,10,5,6,1
+2026-05-11,Rajasthan,Kota,22.0,0.88,Foggy,0,11,5,0,0
+2026-05-12,Uttarakhand,Roorkee,28.0,0.51,Sunny,0,12,5,1,0
+2026-05-13,Tripura,Belonia,17.0,0.65,Sunny,0,13,5,2,0
+2026-05-14,Kerala,Thiruvananthapuram,21.0,0.49,Clear,0,14,5,3,0
+2026-05-15,Uttar Pradesh,Kanpur,22.0,0.7,Clear,0,15,5,4,0
+2026-05-16,West Bengal,Kolkata,21.0,0.45,Cloudy,0,16,5,5,1
+2026-05-17,Meghalaya,Nongstoin,27.0,0.85,Cloudy,0,17,5,6,1
+2026-05-18,Meghalaya,Tura,20.0,0.6,Stormy,0,18,5,0,0
+2026-05-19,Madhya Pradesh,Ujjain,27.0,0.58,Stormy,0,19,5,1,0
+2026-05-20,West Bengal,Siliguri,26.0,0.57,Sunny,0,20,5,2,0
+2026-05-21,Haryana,Chandigarh,20.0,0.61,Foggy,0,21,5,3,0
+2026-05-22,Nagaland,Tuensang,31.0,0.81,Cloudy,0,22,5,4,0
+2026-05-23,Haryana,Panipat,23.0,0.62,Rainy,0,23,5,5,1
+2026-05-24,Tripura,Udaipur,28.0,0.45,Clear,0,24,5,6,1
+2026-05-25,Odisha,Berhampur,34.0,0.81,Clear,0,25,5,0,0
+2026-05-26,Sikkim,Jorethang,34.0,0.65,Clear,0,26,5,1,0
+2026-05-27,Gujarat,Vadodara,19.0,0.45,Stormy,0,27,5,2,0
+2026-05-28,Arunachal Pradesh,Ziro,13.0,0.53,Sunny,0,28,5,3,0
+2026-05-29,Himachal Pradesh,Solan,13.0,0.56,Sunny,0,29,5,4,0
+2026-05-30,Jharkhand,Ranchi,30.0,0.85,Foggy,0,30,5,5,1
+2026-05-31,Telangana,Nizamabad,16.0,0.72,Cloudy,0,31,5,6,1
+2026-06-01,Maharashtra,Mumbai,21.0,0.5,Rainy,0,1,6,0,0
+2026-06-02,Assam,Jorhat,20.0,0.56,Sunny,0,2,6,1,0
+2026-06-03,Chhattisgarh,Korba,31.0,0.8,Rainy,0,3,6,2,0
+2026-06-04,Tripura,Amarpur,12.0,0.69,Sunny,0,4,6,3,0
+2026-06-05,Bihar,Darbhanga,18.0,0.85,Clear,0,5,6,4,0
+2026-06-06,Kerala,Kozhikode,12.0,0.48,Cloudy,0,6,6,5,1
+2026-06-07,Uttarakhand,Roorkee,28.0,0.7,Cloudy,0,7,6,6,1
+2026-06-08,Manipur,Jiribam,23.0,0.85,Sunny,0,8,6,0,0
+2026-06-09,Mizoram,Kolasib,31.0,0.88,Rainy,0,9,6,1,0
+2026-06-10,Rajasthan,Udaipur,25.0,0.46,Stormy,0,10,6,2,0
+2026-06-11,Haryana,Faridabad,23.0,0.58,Clear,0,11,6,3,0
+2026-06-12,Kerala,Thrissur,25.0,0.46,Stormy,0,12,6,4,0
+2026-06-13,Manipur,Jiribam,18.0,0.58,Foggy,0,13,6,5,1
+2026-06-14,Bihar,Patna,32.0,0.79,Cloudy,0,14,6,6,1
+2026-06-15,Mizoram,Serchhip,19.0,0.67,Clear,0,15,6,0,0
+2026-06-16,Nagaland,Kohima,18.0,0.52,Rainy,0,16,6,1,0
+2026-06-17,Telangana,Nizamabad,27.0,0.6,Stormy,0,17,6,2,0
+2026-06-18,Telangana,Khammam,34.0,0.68,Clear,0,18,6,3,0
+2026-06-19,Tripura,Amarpur,27.0,0.54,Stormy,0,19,6,4,0
+2026-06-20,Manipur,Jiribam,24.0,0.81,Sunny,0,20,6,5,1
+2026-06-21,Madhya Pradesh,Indore,30.0,0.62,Sunny,0,21,6,6,1
+2026-06-22,Haryana,Chandigarh,27.0,0.55,Stormy,0,22,6,0,0
+2026-06-23,Uttar Pradesh,Kanpur,27.0,0.43,Stormy,0,23,6,1,0
+2026-06-24,Assam,Nagaon,16.0,0.45,Clear,0,24,6,2,0
+2026-06-25,Andhra Pradesh,Tirupati,22.0,0.78,Foggy,0,25,6,3,0
+2026-06-26,Himachal Pradesh,Shimla,31.0,0.72,Cloudy,0,26,6,4,0
+2026-06-27,Uttar Pradesh,Kanpur,29.0,0.77,Sunny,0,27,6,5,1
+2026-06-28,Haryana,Gurugram,25.0,0.58,Stormy,0,28,6,6,1
+2026-06-29,Gujarat,Ahmedabad,14.0,0.55,Clear,0,29,6,0,0
+2026-06-30,Odisha,Sambalpur,12.0,0.62,Cloudy,0,30,6,1,0
+2026-07-01,Bihar,Muzaffarpur,27.0,0.88,Foggy,0,1,7,2,0
+2026-07-02,Karnataka,Hubli,20.0,0.4,Clear,0,2,7,3,0
+2026-07-03,Himachal Pradesh,Shimla,23.0,0.77,Clear,0,3,7,4,0
+2026-07-04,Mizoram,Kolasib,22.0,0.81,Clear,0,4,7,5,1
+2026-07-05,Punjab,Amritsar,15.0,0.5,Rainy,0,5,7,6,1
+2026-07-06,Karnataka,Mangalore,21.0,0.86,Cloudy,0,6,7,0,0
+2026-07-07,Sikkim,Jorethang,33.0,0.85,Sunny,0,7,7,1,0
+2026-07-08,Haryana,Chandigarh,35.0,0.52,Sunny,0,8,7,2,0
+2026-07-09,Meghalaya,Nongstoin,27.0,0.89,Sunny,0,9,7,3,0
+2026-07-10,Manipur,Imphal,32.0,0.48,Stormy,0,10,7,4,0
+2026-07-11,Andhra Pradesh,Visakhapatnam,21.0,0.83,Cloudy,0,11,7,5,1
+2026-07-12,Uttar Pradesh,Meerut,32.0,0.42,Stormy,0,12,7,6,1
+2026-07-13,Himachal Pradesh,Manali,27.0,0.5,Stormy,0,13,7,0,0
+2026-07-14,Punjab,Jalandhar,23.0,0.67,Cloudy,0,14,7,1,0
+2026-07-15,Uttarakhand,Nainital,34.0,0.79,Clear,0,15,7,2,0
+2026-07-16,Uttarakhand,Roorkee,11.0,0.58,Sunny,0,16,7,3,0
+2026-07-17,Maharashtra,Nashik,14.0,0.9,Stormy,0,17,7,4,0
+2026-07-18,Punjab,Amritsar,21.0,0.43,Foggy,0,18,7,5,1
+2026-07-19,Rajasthan,Jaipur,15.0,0.68,Cloudy,0,19,7,6,1
+2026-07-20,Mizoram,Serchhip,33.0,0.75,Clear,0,20,7,0,0
+2026-07-21,Odisha,Berhampur,16.0,0.79,Rainy,0,21,7,1,0
+2026-07-22,West Bengal,Asansol,18.0,0.42,Clear,0,22,7,2,0
+2026-07-23,Odisha,Rourkela,32.0,0.88,Clear,0,23,7,3,0
+2026-07-24,Punjab,Jalandhar,34.0,0.53,Cloudy,0,24,7,4,0
+2026-07-25,Uttarakhand,Dehradun,25.0,0.42,Cloudy,0,25,7,5,1
+2026-07-26,Meghalaya,Williamnagar,11.0,0.55,Clear,0,26,7,6,1
+2026-07-27,Andhra Pradesh,Guntur,26.0,0.72,Clear,0,27,7,0,0
+2026-07-28,Tripura,Amarpur,16.0,0.56,Clear,0,28,7,1,0
+2026-07-29,Haryana,Faridabad,27.0,0.89,Clear,0,29,7,2,0
+2026-07-30,Manipur,Jiribam,18.0,0.59,Stormy,0,30,7,3,0
+2026-07-31,Uttar Pradesh,Meerut,14.0,0.8,Stormy,0,31,7,4,0
+2026-08-01,Andhra Pradesh,Guntur,20.0,0.66,Rainy,0,1,8,5,1
+2026-08-02,Meghalaya,Tura,35.0,0.52,Cloudy,0,2,8,6,1
+2026-08-03,Uttarakhand,Roorkee,22.0,0.69,Foggy,0,3,8,0,0
+2026-08-04,Himachal Pradesh,Dharamsala,12.0,0.59,Sunny,0,4,8,1,0
+2026-08-05,Tamil Nadu,Trichy,21.0,0.89,Sunny,0,5,8,2,0
+2026-08-06,Meghalaya,Shillong,13.0,0.7,Foggy,0,6,8,3,0
+2026-08-07,Rajasthan,Jodhpur,24.0,0.9,Foggy,0,7,8,4,0
+2026-08-08,Nagaland,Zunheboto,25.0,0.86,Stormy,0,8,8,5,1
+2026-08-09,Assam,Dibrugarh,27.0,0.54,Clear,0,9,8,6,1
+2026-08-10,Maharashtra,Nagpur,14.0,0.54,Foggy,0,10,8,0,0
+2026-08-11,Sikkim,Jorethang,14.0,0.68,Clear,0,11,8,1,0
+2026-08-12,Assam,Jorhat,35.0,0.66,Rainy,0,12,8,2,0
+2026-08-13,Tripura,Udaipur,33.0,0.66,Foggy,0,13,8,3,0
+2026-08-14,Nagaland,Tuensang,27.0,0.5,Cloudy,0,14,8,4,0
+2026-08-15,Haryana,Gurugram,13.0,0.41,Stormy,0,15,8,5,1
+2026-08-16,Goa,Mapusa,27.0,0.5,Sunny,0,16,8,6,1
+2026-08-17,Madhya Pradesh,Ujjain,12.0,0.8,Foggy,0,17,8,0,0
+2026-08-18,Haryana,Panipat,34.0,0.62,Foggy,0,18,8,1,0
+2026-08-19,Punjab,Amritsar,13.0,0.71,Cloudy,0,19,8,2,0
+2026-08-20,Odisha,Bhubaneswar,35.0,0.84,Rainy,0,20,8,3,0
+2026-08-21,Manipur,Thoubal,17.0,0.57,Clear,0,21,8,4,0
+2026-08-22,Mizoram,Champhai,10.0,0.46,Stormy,0,22,8,5,1
+2026-08-23,Gujarat,Vadodara,15.0,0.45,Sunny,0,23,8,6,1
+2026-08-24,Uttar Pradesh,Agra,34.0,0.43,Foggy,0,24,8,0,0
+2026-08-25,Punjab,Ludhiana,15.0,0.61,Cloudy,0,25,8,1,0
+2026-08-26,Kerala,Thiruvananthapuram,14.0,0.77,Stormy,0,26,8,2,0
+2026-08-27,Kerala,Kottayam,16.0,0.43,Clear,0,27,8,3,0
+2026-08-28,Manipur,Thoubal,25.0,0.88,Stormy,0,28,8,4,0
+2026-08-29,Rajasthan,Jodhpur,13.0,0.64,Sunny,0,29,8,5,1
+2026-08-30,Assam,Tinsukia,24.0,0.57,Cloudy,0,30,8,6,1
+2026-08-31,Meghalaya,Jowai,31.0,0.4,Sunny,0,31,8,0,0
+2026-09-01,Kerala,Kozhikode,16.0,0.75,Sunny,0,1,9,1,0
+2026-09-02,Uttarakhand,Haridwar,33.0,0.89,Cloudy,0,2,9,2,0
+2026-09-03,Kerala,Kochi,18.0,0.58,Foggy,0,3,9,3,0
+2026-09-04,West Bengal,Durgapur,27.0,0.58,Clear,0,4,9,4,0
+2026-09-05,Karnataka,Hubli,16.0,0.4,Clear,0,5,9,5,1
+2026-09-06,Telangana,Khammam,18.0,0.52,Rainy,0,6,9,6,1
+2026-09-07,Assam,Tinsukia,32.0,0.55,Foggy,0,7,9,0,0
+2026-09-08,Jharkhand,Ranchi,14.0,0.64,Rainy,0,8,9,1,0
+2026-09-09,Telangana,Warangal,16.0,0.62,Foggy,0,9,9,2,0
+2026-09-10,Karnataka,Hubli,23.0,0.72,Rainy,0,10,9,3,0
+2026-09-11,Chhattisgarh,Raipur,29.0,0.9,Stormy,0,11,9,4,0
+2026-09-12,Haryana,Gurugram,19.0,0.73,Clear,0,12,9,5,1
+2026-09-13,Kerala,Thrissur,13.0,0.45,Rainy,0,13,9,6,1
+2026-09-14,Arunachal Pradesh,Pasighat,28.0,0.5,Foggy,0,14,9,0,0
+2026-09-15,Mizoram,Aizawl,17.0,0.85,Foggy,0,15,9,1,0
+2026-09-16,Telangana,Warangal,26.0,0.72,Clear,0,16,9,2,0
+2026-09-17,Kerala,Kochi,11.0,0.52,Clear,0,17,9,3,0
+2026-09-18,Punjab,Patiala,34.0,0.48,Cloudy,0,18,9,4,0
+2026-09-19,Bihar,Patna,33.0,0.43,Rainy,0,19,9,5,1
+2026-09-20,Bihar,Darbhanga,27.0,0.59,Stormy,0,20,9,6,1
+2026-09-21,Tamil Nadu,Salem,12.0,0.45,Stormy,0,21,9,0,0
+2026-09-22,Himachal Pradesh,Dharamsala,21.0,0.42,Clear,0,22,9,1,0
+2026-09-23,Meghalaya,Williamnagar,10.0,0.74,Cloudy,0,23,9,2,0
+2026-09-24,Karnataka,Belagavi,30.0,0.44,Cloudy,0,24,9,3,0
+2026-09-25,Chhattisgarh,Korba,23.0,0.77,Rainy,0,25,9,4,0
+2026-09-26,Bihar,Darbhanga,24.0,0.86,Stormy,0,26,9,5,1
+2026-09-27,Himachal Pradesh,Kullu,33.0,0.87,Rainy,0,27,9,6,1
+2026-09-28,Rajasthan,Kota,18.0,0.67,Stormy,0,28,9,0,0
+2026-09-29,Goa,Margao,25.0,0.63,Cloudy,0,29,9,1,0
+2026-09-30,Bihar,Muzaffarpur,21.0,0.41,Cloudy,0,30,9,2,0
+2026-10-01,Nagaland,Kohima,23.0,0.49,Foggy,0,1,10,3,0
+2026-10-02,Odisha,Bhubaneswar,21.0,0.85,Clear,0,2,10,4,0
+2026-10-03,Himachal Pradesh,Kullu,26.0,0.52,Foggy,0,3,10,5,1
+2026-10-04,West Bengal,Siliguri,23.0,0.53,Stormy,0,4,10,6,1
+2026-10-05,Kerala,Thrissur,22.0,0.68,Sunny,0,5,10,0,0
+2026-10-06,Bihar,Darbhanga,18.0,0.67,Clear,0,6,10,1,0
+2026-10-07,Karnataka,Mysore,14.0,0.85,Cloudy,0,7,10,2,0
+2026-10-08,Uttarakhand,Nainital,13.0,0.67,Cloudy,0,8,10,3,0
+2026-10-09,Assam,Nagaon,30.0,0.89,Rainy,0,9,10,4,0
+2026-10-10,Himachal Pradesh,Shimla,30.0,0.62,Stormy,0,10,10,5,1
+2026-10-11,Goa,Mapusa,12.0,0.8,Sunny,0,11,10,6,1
+2026-10-12,Madhya Pradesh,Indore,29.0,0.72,Clear,0,12,10,0,0
+2026-10-13,West Bengal,Kolkata,23.0,0.65,Cloudy,0,13,10,1,0
+2026-10-14,Bihar,Darbhanga,13.0,0.87,Foggy,0,14,10,2,0
+2026-10-15,Tamil Nadu,Coimbatore,10.0,0.67,Clear,0,15,10,3,0
+2026-10-16,Andhra Pradesh,Tirupati,27.0,0.81,Stormy,0,16,10,4,0
+2026-10-17,Maharashtra,Pune,10.0,0.89,Stormy,0,17,10,5,1
+2026-10-18,Sikkim,Jorethang,35.0,0.75,Rainy,0,18,10,6,1
+2026-10-19,Jharkhand,Jamshedpur,17.0,0.87,Stormy,0,19,10,0,0
+2026-10-20,Kerala,Kochi,21.0,0.41,Cloudy,0,20,10,1,0
+2026-10-21,Himachal Pradesh,Manali,27.0,0.53,Foggy,0,21,10,2,0
+2026-10-22,Uttar Pradesh,Varanasi,12.0,0.46,Sunny,0,22,10,3,0
+2026-10-23,Himachal Pradesh,Dharamsala,14.0,0.42,Clear,0,23,10,4,0
+2026-10-24,Haryana,Panipat,22.0,0.8,Rainy,0,24,10,5,1
+2026-10-25,Tamil Nadu,Trichy,29.0,0.44,Clear,0,25,10,6,1
+2026-10-26,Punjab,Amritsar,23.0,0.4,Rainy,0,26,10,0,0
+2026-10-27,Himachal Pradesh,Solan,24.0,0.57,Clear,0,27,10,1,0
+2026-10-28,Nagaland,Dimapur,16.0,0.44,Clear,0,28,10,2,0
+2026-10-29,Mizoram,Aizawl,15.0,0.42,Foggy,0,29,10,3,0
+2026-10-30,Andhra Pradesh,Vijayawada,15.0,0.88,Stormy,0,30,10,4,0
+2026-10-31,Tripura,Belonia,30.0,0.73,Clear,0,31,10,5,1
+2026-11-01,Uttar Pradesh,Agra,27.0,0.61,Cloudy,0,1,11,6,1
+2026-11-02,Jharkhand,Ranchi,35.0,0.85,Rainy,0,2,11,0,0
+2026-11-03,Telangana,Hyderabad,30.0,0.62,Foggy,0,3,11,1,0
+2026-11-04,Sikkim,Mangan,26.0,0.88,Sunny,0,4,11,2,0
+2026-11-05,Goa,Vasco da Gama,10.0,0.6,Sunny,0,5,11,3,0
+2026-11-06,Uttarakhand,Haridwar,33.0,0.42,Foggy,0,6,11,4,0
+2026-11-07,Karnataka,Hubli,34.0,0.87,Cloudy,0,7,11,5,1
+2026-11-08,Rajasthan,Jodhpur,28.0,0.46,Rainy,0,8,11,6,1
+2026-11-09,Kerala,Thrissur,24.0,0.65,Rainy,0,9,11,0,0
+2026-11-10,Karnataka,Belagavi,31.0,0.85,Sunny,0,10,11,1,0
+2026-11-11,Chhattisgarh,Durg,22.0,0.53,Stormy,0,11,11,2,0
+2026-11-12,Odisha,Cuttack,13.0,0.51,Clear,0,12,11,3,0
+2026-11-13,Bihar,Muzaffarpur,22.0,0.81,Foggy,0,13,11,4,0
+2026-11-14,Odisha,Rourkela,32.0,0.74,Stormy,0,14,11,5,1
+2026-11-15,Kerala,Thiruvananthapuram,29.0,0.83,Clear,0,15,11,6,1
+2026-11-16,Haryana,Ambala,34.0,0.55,Sunny,0,16,11,0,0
+2026-11-17,Sikkim,Mangan,23.0,0.78,Clear,0,17,11,1,0
+2026-11-18,Maharashtra,Pune,17.0,0.42,Clear,0,18,11,2,0
+2026-11-19,Chhattisgarh,Raipur,20.0,0.58,Foggy,0,19,11,3,0
+2026-11-20,Chhattisgarh,Raipur,30.0,0.47,Sunny,0,20,11,4,0
+2026-11-21,Sikkim,Jorethang,15.0,0.75,Stormy,0,21,11,5,1
+2026-11-22,Manipur,Thoubal,13.0,0.61,Sunny,0,22,11,6,1
+2026-11-23,Karnataka,Bangalore,28.0,0.77,Sunny,0,23,11,0,0
+2026-11-24,Gujarat,Vadodara,19.0,0.64,Rainy,0,24,11,1,0
+2026-11-25,Haryana,Panipat,32.0,0.78,Clear,0,25,11,2,0
+2026-11-26,Meghalaya,Jowai,35.0,0.83,Clear,0,26,11,3,0
+2026-11-27,Meghalaya,Nongstoin,26.0,0.81,Foggy,0,27,11,4,0
+2026-11-28,Meghalaya,Jowai,31.0,0.74,Foggy,0,28,11,5,1
+2026-11-29,Andhra Pradesh,Tirupati,13.0,0.82,Rainy,0,29,11,6,1
+2026-11-30,Haryana,Gurugram,16.0,0.49,Clear,0,30,11,0,0
+2026-12-01,Rajasthan,Jodhpur,14.0,0.72,Rainy,0,1,12,1,0
+2026-12-02,Kerala,Kottayam,33.0,0.58,Stormy,0,2,12,2,0
+2026-12-03,Karnataka,Mangalore,27.0,0.67,Clear,0,3,12,3,0
+2026-12-04,Arunachal Pradesh,Pasighat,10.0,0.44,Foggy,0,4,12,4,0
+2026-12-05,Haryana,Ambala,25.0,0.59,Foggy,0,5,12,5,1
+2026-12-06,Manipur,Churachandpur,21.0,0.41,Foggy,0,6,12,6,1
+2026-12-07,Haryana,Ambala,25.0,0.46,Cloudy,0,7,12,0,0
+2026-12-08,Madhya Pradesh,Ujjain,20.0,0.75,Rainy,0,8,12,1,0
+2026-12-09,Telangana,Nizamabad,27.0,0.61,Clear,0,9,12,2,0
+2026-12-10,Tamil Nadu,Madurai,20.0,0.48,Cloudy,0,10,12,3,0
+2026-12-11,Odisha,Rourkela,16.0,0.45,Rainy,0,11,12,4,0
+2026-12-12,Madhya Pradesh,Gwalior,10.0,0.41,Clear,0,12,12,5,1
+2026-12-13,Uttar Pradesh,Kanpur,27.0,0.5,Foggy,0,13,12,6,1
+2026-12-14,Jharkhand,Dhanbad,18.0,0.6,Stormy,0,14,12,0,0
+2026-12-15,Meghalaya,Williamnagar,10.0,0.63,Sunny,0,15,12,1,0
+2026-12-16,Gujarat,Bhavnagar,18.0,0.64,Cloudy,0,16,12,2,0
+2026-12-17,Andhra Pradesh,Tirupati,20.0,0.88,Stormy,0,17,12,3,0
+2026-12-18,Andhra Pradesh,Tirupati,26.0,0.73,Stormy,0,18,12,4,0
+2026-12-19,Manipur,Imphal,13.0,0.48,Rainy,0,19,12,5,1
+2026-12-20,Andhra Pradesh,Guntur,24.0,0.4,Stormy,0,20,12,6,1
+2026-12-21,Tamil Nadu,Trichy,28.0,0.85,Rainy,0,21,12,0,0
+2026-12-22,Uttarakhand,Nainital,18.0,0.83,Foggy,0,22,12,1,0
+2026-12-23,Gujarat,Ahmedabad,20.0,0.63,Clear,0,23,12,2,0
+2026-12-24,Karnataka,Mangalore,12.0,0.74,Foggy,0,24,12,3,0
+2026-12-25,Uttar Pradesh,Meerut,31.0,0.89,Stormy,0,25,12,4,0
+2026-12-26,Sikkim,Mangan,11.0,0.4,Stormy,0,26,12,5,1
+2026-12-27,Haryana,Gurugram,12.0,0.58,Stormy,0,27,12,6,1
+2026-12-28,Assam,Guwahati,15.0,0.73,Clear,0,28,12,0,0
+2026-12-29,Meghalaya,Nongstoin,13.0,0.81,Stormy,0,29,12,1,0
+2026-12-30,Kerala,Thrissur,31.0,0.47,Clear,0,30,12,2,0
+2026-12-31,Punjab,Ludhiana,20.0,0.58,Clear,0,31,12,3,0
+2027-01-01,Gujarat,Bhavnagar,34.0,0.41,Sunny,0,1,1,4,0
+2027-01-02,Telangana,Nizamabad,23.0,0.64,Cloudy,0,2,1,5,1
+2027-01-03,Nagaland,Kohima,19.0,0.42,Clear,0,3,1,6,1
+2027-01-04,Karnataka,Belagavi,16.0,0.67,Stormy,0,4,1,0,0
+2027-01-05,Assam,Jorhat,13.0,0.69,Clear,0,5,1,1,0
+2027-01-06,Rajasthan,Ajmer,28.0,0.75,Cloudy,0,6,1,2,0
+2027-01-07,Manipur,Imphal,25.0,0.72,Foggy,0,7,1,3,0
+2027-01-08,Assam,Dibrugarh,11.0,0.69,Clear,0,8,1,4,0
+2027-01-09,Gujarat,Rajkot,13.0,0.87,Foggy,0,9,1,5,1
+2027-01-10,Nagaland,Mokokchung,16.0,0.56,Clear,0,10,1,6,1
+2027-01-11,Gujarat,Bhavnagar,31.0,0.52,Stormy,0,11,1,0,0
+2027-01-12,Telangana,Khammam,32.0,0.81,Sunny,0,12,1,1,0
+2027-01-13,Nagaland,Kohima,14.0,0.52,Clear,0,13,1,2,0
+2027-01-14,Meghalaya,Jowai,18.0,0.53,Foggy,0,14,1,3,0
+2027-01-15,Chhattisgarh,Raipur,18.0,0.79,Clear,0,15,1,4,0
+2027-01-16,Jharkhand,Bokaro,18.0,0.54,Rainy,0,16,1,5,1
+2027-01-17,Jharkhand,Jamshedpur,20.0,0.6,Cloudy,0,17,1,6,1
+2027-01-18,West Bengal,Durgapur,34.0,0.86,Cloudy,0,18,1,0,0
+2027-01-19,Mizoram,Kolasib,35.0,0.74,Stormy,0,19,1,1,0
+2027-01-20,Mizoram,Champhai,22.0,0.51,Foggy,0,20,1,2,0
+2027-01-21,West Bengal,Siliguri,21.0,0.5,Clear,0,21,1,3,0
+2027-01-22,Sikkim,Jorethang,14.0,0.46,Foggy,0,22,1,4,0
+2027-01-23,Meghalaya,Jowai,31.0,0.59,Stormy,0,23,1,5,1
+2027-01-24,Goa,Margao,32.0,0.62,Stormy,0,24,1,6,1
+2027-01-25,Arunachal Pradesh,Tawang,34.0,0.83,Cloudy,0,25,1,0,0
+2027-01-26,Goa,Mapusa,16.0,0.53,Foggy,0,26,1,1,0
+2027-01-27,Haryana,Faridabad,27.0,0.87,Sunny,0,27,1,2,0
+2027-01-28,Chhattisgarh,Raigarh,32.0,0.71,Rainy,0,28,1,3,0
+2027-01-29,Uttarakhand,Dehradun,26.0,0.56,Rainy,0,29,1,4,0
+2027-01-30,Uttar Pradesh,Lucknow,19.0,0.82,Rainy,0,30,1,5,1
+2027-01-31,Rajasthan,Jodhpur,31.0,0.63,Stormy,0,31,1,6,1
+2027-02-01,Kerala,Kottayam,25.0,0.83,Sunny,0,1,2,0,0
+2027-02-02,Punjab,Patiala,25.0,0.68,Cloudy,0,2,2,1,0
+2027-02-03,Jharkhand,Jamshedpur,13.0,0.55,Foggy,0,3,2,2,0
+2027-02-04,Maharashtra,Mumbai,13.0,0.79,Stormy,0,4,2,3,0
+2027-02-05,Maharashtra,Pune,15.0,0.83,Clear,0,5,2,4,0
+2027-02-06,Rajasthan,Ajmer,30.0,0.62,Foggy,0,6,2,5,1
+2027-02-07,Haryana,Faridabad,18.0,0.75,Rainy,0,7,2,6,1
+2027-02-08,Arunachal Pradesh,Ziro,27.0,0.9,Sunny,0,8,2,0,0
+2027-02-09,Telangana,Nizamabad,10.0,0.48,Cloudy,0,9,2,1,0
+2027-02-10,Chhattisgarh,Korba,34.0,0.46,Foggy,0,10,2,2,0
+2027-02-11,Goa,Ponda,16.0,0.54,Stormy,0,11,2,3,0
+2027-02-12,Rajasthan,Jaipur,15.0,0.42,Rainy,0,12,2,4,0
+2027-02-13,Manipur,Thoubal,27.0,0.84,Clear,0,13,2,5,1
+2027-02-14,Jharkhand,Dhanbad,24.0,0.6,Clear,0,14,2,6,1
+2027-02-15,Sikkim,Pakyong,17.0,0.72,Stormy,0,15,2,0,0
+2027-02-16,Mizoram,Lunglei,11.0,0.41,Sunny,0,16,2,1,0
+2027-02-17,Bihar,Bhagalpur,11.0,0.9,Rainy,0,17,2,2,0
+2027-02-18,Tamil Nadu,Salem,22.0,0.55,Rainy,0,18,2,3,0
+2027-02-19,Punjab,Jalandhar,14.0,0.48,Foggy,0,19,2,4,0
+2027-02-20,Chhattisgarh,Bilaspur,26.0,0.52,Rainy,0,20,2,5,1
+2027-02-21,Gujarat,Surat,32.0,0.72,Rainy,0,21,2,6,1
+2027-02-22,Gujarat,Ahmedabad,20.0,0.7,Clear,0,22,2,0,0
+2027-02-23,Jharkhand,Ranchi,13.0,0.7,Clear,0,23,2,1,0
+2027-02-24,Haryana,Faridabad,34.0,0.9,Sunny,0,24,2,2,0
+2027-02-25,Goa,Mapusa,35.0,0.84,Clear,0,25,2,3,0
+2027-02-26,Tripura,Udaipur,32.0,0.42,Sunny,0,26,2,4,0
+2027-02-27,Kerala,Kottayam,24.0,0.65,Stormy,0,27,2,5,1
+2027-02-28,Meghalaya,Shillong,22.0,0.57,Sunny,0,28,2,6,1
+2027-03-01,Uttar Pradesh,Kanpur,29.0,0.46,Rainy,0,1,3,0,0
+2027-03-02,Arunachal Pradesh,Pasighat,12.0,0.42,Foggy,0,2,3,1,0
+2027-03-03,Nagaland,Tuensang,23.0,0.48,Sunny,0,3,3,2,0
+2027-03-04,Nagaland,Kohima,12.0,0.58,Stormy,0,4,3,3,0
+2027-03-05,Telangana,Hyderabad,27.0,0.87,Rainy,0,5,3,4,0
+2027-03-06,Rajasthan,Jaipur,28.0,0.7,Stormy,0,6,3,5,1
+2027-03-07,Uttarakhand,Rishikesh,24.0,0.71,Rainy,0,7,3,6,1
+2027-03-08,Manipur,Churachandpur,11.0,0.47,Clear,0,8,3,0,0
+2027-03-09,Kerala,Thrissur,14.0,0.76,Cloudy,0,9,3,1,0
+2027-03-10,Kerala,Thiruvananthapuram,24.0,0.53,Rainy,0,10,3,2,0
+2027-03-11,Meghalaya,Tura,22.0,0.63,Rainy,0,11,3,3,0
+2027-03-12,Rajasthan,Jaipur,23.0,0.58,Sunny,0,12,3,4,0
+2027-03-13,Odisha,Bhubaneswar,27.0,0.82,Cloudy,0,13,3,5,1
+2027-03-14,Punjab,Amritsar,11.0,0.52,Sunny,0,14,3,6,1
+2027-03-15,Uttarakhand,Rishikesh,23.0,0.81,Rainy,0,15,3,0,0
+2027-03-16,Mizoram,Aizawl,25.0,0.83,Cloudy,0,16,3,1,0
+2027-03-17,Uttarakhand,Haridwar,13.0,0.62,Clear,0,17,3,2,0
+2027-03-18,Mizoram,Lunglei,31.0,0.73,Rainy,0,18,3,3,0
+2027-03-19,Telangana,Warangal,22.0,0.66,Cloudy,0,19,3,4,0
+2027-03-20,West Bengal,Kolkata,29.0,0.49,Rainy,0,20,3,5,1
+2027-03-21,West Bengal,Asansol,11.0,0.73,Sunny,0,21,3,6,1
+2027-03-22,Kerala,Kozhikode,10.0,0.83,Stormy,0,22,3,0,0
+2027-03-23,Himachal Pradesh,Solan,34.0,0.8,Sunny,0,23,3,1,0
+2027-03-24,Meghalaya,Nongstoin,23.0,0.56,Cloudy,0,24,3,2,0
+2027-03-25,Assam,Jorhat,33.0,0.82,Stormy,0,25,3,3,0
+2027-03-26,Meghalaya,Shillong,34.0,0.4,Cloudy,0,26,3,4,0
+2027-03-27,Madhya Pradesh,Ujjain,18.0,0.62,Sunny,0,27,3,5,1
+2027-03-28,Odisha,Bhubaneswar,23.0,0.68,Rainy,0,28,3,6,1
+2027-03-29,Bihar,Darbhanga,33.0,0.76,Clear,0,29,3,0,0
+2027-03-30,Gujarat,Rajkot,31.0,0.82,Stormy,0,30,3,1,0
+2027-03-31,Tripura,Udaipur,11.0,0.4,Foggy,0,31,3,2,0
+2027-04-01,Himachal Pradesh,Solan,22.0,0.8,Clear,0,1,4,3,0
+2027-04-02,Odisha,Sambalpur,33.0,0.82,Stormy,0,2,4,4,0
+2027-04-03,Tamil Nadu,Trichy,22.0,0.51,Sunny,0,3,4,5,1
+2027-04-04,Chhattisgarh,Durg,25.0,0.5,Cloudy,0,4,4,6,1
+2027-04-05,Mizoram,Kolasib,31.0,0.5,Clear,0,5,4,0,0
+2027-04-06,Chhattisgarh,Durg,14.0,0.64,Cloudy,0,6,4,1,0
+2027-04-07,Assam,Jorhat,17.0,0.88,Clear,0,7,4,2,0
+2027-04-08,Chhattisgarh,Bilaspur,23.0,0.8,Clear,0,8,4,3,0
+2027-04-09,Andhra Pradesh,Visakhapatnam,22.0,0.51,Sunny,0,9,4,4,0
+2027-04-10,Odisha,Rourkela,29.0,0.53,Foggy,0,10,4,5,1
+2027-04-11,Madhya Pradesh,Indore,10.0,0.68,Clear,0,11,4,6,1
+2027-04-12,Assam,Nagaon,28.0,0.46,Stormy,0,12,4,0,0
+2027-04-13,Assam,Tinsukia,10.0,0.78,Foggy,0,13,4,1,0
+2027-04-14,Meghalaya,Nongstoin,23.0,0.71,Sunny,0,14,4,2,0
+2027-04-15,Sikkim,Pakyong,10.0,0.88,Rainy,0,15,4,3,0
+2027-04-16,Tamil Nadu,Salem,34.0,0.63,Stormy,0,16,4,4,0
+2027-04-17,Chhattisgarh,Raigarh,31.0,0.51,Cloudy,0,17,4,5,1
+2027-04-18,Assam,Guwahati,17.0,0.43,Rainy,0,18,4,6,1
+2027-04-19,Sikkim,Mangan,21.0,0.71,Sunny,0,19,4,0,0
+2027-04-20,Goa,Ponda,24.0,0.46,Clear,0,20,4,1,0
+2027-04-21,Nagaland,Kohima,11.0,0.9,Rainy,0,21,4,2,0
+2027-04-22,Odisha,Rourkela,35.0,0.51,Rainy,0,22,4,3,0
+2027-04-23,Tamil Nadu,Salem,20.0,0.52,Sunny,0,23,4,4,0
+2027-04-24,Goa,Mapusa,33.0,0.58,Cloudy,0,24,4,5,1
+2027-04-25,Chhattisgarh,Raipur,32.0,0.54,Rainy,0,25,4,6,1
+2027-04-26,Uttarakhand,Haridwar,32.0,0.59,Rainy,0,26,4,0,0
+2027-04-27,Himachal Pradesh,Kullu,11.0,0.4,Clear,0,27,4,1,0
+2027-04-28,Goa,Vasco da Gama,32.0,0.89,Clear,0,28,4,2,0
+2027-04-29,Uttarakhand,Nainital,14.0,0.55,Clear,0,29,4,3,0
+2027-04-30,Tamil Nadu,Salem,20.0,0.87,Cloudy,0,30,4,4,0
+2027-05-01,Uttar Pradesh,Meerut,32.0,0.51,Stormy,0,1,5,5,1
+2027-05-02,Himachal Pradesh,Dharamsala,14.0,0.51,Rainy,0,2,5,6,1
+2027-05-03,Arunachal Pradesh,Aalo,34.0,0.61,Rainy,0,3,5,0,0
+2027-05-04,Mizoram,Champhai,32.0,0.4,Cloudy,0,4,5,1,0
+2027-05-05,Jharkhand,Deoghar,32.0,0.82,Sunny,0,5,5,2,0
+2027-05-06,Uttar Pradesh,Agra,16.0,0.54,Sunny,0,6,5,3,0
+2027-05-07,Himachal Pradesh,Dharamsala,21.0,0.7,Cloudy,0,7,5,4,0
+2027-05-08,Sikkim,Gangtok,12.0,0.48,Cloudy,0,8,5,5,1
+2027-05-09,Rajasthan,Jaipur,31.0,0.69,Cloudy,0,9,5,6,1
+2027-05-10,Madhya Pradesh,Ujjain,26.0,0.69,Clear,0,10,5,0,0
+2027-05-11,Telangana,Hyderabad,27.0,0.66,Cloudy,0,11,5,1,0
+2027-05-12,Chhattisgarh,Korba,18.0,0.8,Stormy,0,12,5,2,0
+2027-05-13,Chhattisgarh,Korba,28.0,0.4,Rainy,0,13,5,3,0
+2027-05-14,Himachal Pradesh,Kullu,12.0,0.77,Stormy,0,14,5,4,0
+2027-05-15,Assam,Dibrugarh,13.0,0.84,Sunny,0,15,5,5,1
+2027-05-16,Bihar,Gaya,30.0,0.51,Sunny,0,16,5,6,1
+2027-05-17,Arunachal Pradesh,Tawang,27.0,0.8,Cloudy,0,17,5,0,0
+2027-05-18,Bihar,Bhagalpur,28.0,0.77,Stormy,0,18,5,1,0
+2027-05-19,West Bengal,Kolkata,33.0,0.5,Clear,0,19,5,2,0
+2027-05-20,Kerala,Thrissur,29.0,0.76,Sunny,0,20,5,3,0
+2027-05-21,Odisha,Berhampur,34.0,0.75,Foggy,0,21,5,4,0
+2027-05-22,West Bengal,Siliguri,12.0,0.79,Clear,0,22,5,5,1
+2027-05-23,Gujarat,Vadodara,24.0,0.46,Clear,0,23,5,6,1
+2027-05-24,Gujarat,Bhavnagar,11.0,0.67,Rainy,0,24,5,0,0
+2027-05-25,Bihar,Darbhanga,15.0,0.5,Foggy,0,25,5,1,0
+2027-05-26,Andhra Pradesh,Guntur,31.0,0.83,Foggy,0,26,5,2,0
+2027-05-27,Mizoram,Kolasib,19.0,0.75,Foggy,0,27,5,3,0
+2027-05-28,Himachal Pradesh,Kullu,20.0,0.62,Rainy,0,28,5,4,0
+2027-05-29,Jharkhand,Ranchi,30.0,0.57,Foggy,0,29,5,5,1
+2027-05-30,Haryana,Ambala,15.0,0.87,Sunny,0,30,5,6,1
+2027-05-31,Bihar,Gaya,17.0,0.84,Foggy,0,31,5,0,0
+2027-06-01,Madhya Pradesh,Jabalpur,30.0,0.76,Cloudy,0,1,6,1,0
+2027-06-02,Uttarakhand,Dehradun,34.0,0.6,Foggy,0,2,6,2,0
+2027-06-03,Tripura,Belonia,12.0,0.48,Rainy,0,3,6,3,0
+2027-06-04,Madhya Pradesh,Jabalpur,30.0,0.55,Foggy,0,4,6,4,0
+2027-06-05,Bihar,Muzaffarpur,31.0,0.55,Foggy,0,5,6,5,1
+2027-06-06,Uttar Pradesh,Lucknow,28.0,0.49,Rainy,0,6,6,6,1
+2027-06-07,Bihar,Muzaffarpur,14.0,0.89,Foggy,0,7,6,0,0
+2027-06-08,Rajasthan,Kota,31.0,0.86,Clear,0,8,6,1,0
+2027-06-09,Mizoram,Aizawl,24.0,0.48,Sunny,0,9,6,2,0
+2027-06-10,Gujarat,Rajkot,17.0,0.84,Rainy,0,10,6,3,0
+2027-06-11,Nagaland,Zunheboto,13.0,0.72,Foggy,0,11,6,4,0
+2027-06-12,Tamil Nadu,Coimbatore,19.0,0.84,Stormy,0,12,6,5,1
+2027-06-13,Nagaland,Tuensang,16.0,0.4,Rainy,0,13,6,6,1
+2027-06-14,Himachal Pradesh,Kullu,31.0,0.62,Rainy,0,14,6,0,0
+2027-06-15,Maharashtra,Mumbai,22.0,0.68,Stormy,0,15,6,1,0
+2027-06-16,Arunachal Pradesh,Tawang,27.0,0.4,Foggy,0,16,6,2,0
+2027-06-17,Gujarat,Rajkot,23.0,0.56,Rainy,0,17,6,3,0
+2027-06-18,Nagaland,Zunheboto,17.0,0.83,Clear,0,18,6,4,0
+2027-06-19,Sikkim,Pakyong,35.0,0.41,Foggy,0,19,6,5,1
+2027-06-20,Tripura,Agartala,35.0,0.68,Clear,0,20,6,6,1
+2027-06-21,Odisha,Rourkela,28.0,0.4,Sunny,0,21,6,0,0
+2027-06-22,Assam,Nagaon,25.0,0.81,Sunny,0,22,6,1,0
+2027-06-23,Manipur,Thoubal,24.0,0.89,Cloudy,0,23,6,2,0
+2027-06-24,West Bengal,Asansol,14.0,0.47,Foggy,0,24,6,3,0
+2027-06-25,Maharashtra,Pune,20.0,0.66,Sunny,0,25,6,4,0
+2027-06-26,Assam,Guwahati,31.0,0.4,Clear,0,26,6,5,1
+2027-06-27,Odisha,Cuttack,20.0,0.89,Clear,0,27,6,6,1
+2027-06-28,Kerala,Kozhikode,19.0,0.69,Cloudy,0,28,6,0,0
+2027-06-29,Goa,Mapusa,31.0,0.71,Sunny,0,29,6,1,0
+2027-06-30,Nagaland,Kohima,10.0,0.44,Cloudy,0,30,6,2,0
+2027-07-01,Bihar,Gaya,33.0,0.61,Rainy,0,1,7,3,0
+2027-07-02,Manipur,Kakching,32.0,0.88,Stormy,0,2,7,4,0
+2027-07-03,Meghalaya,Tura,34.0,0.46,Sunny,0,3,7,5,1
+2027-07-04,Tamil Nadu,Trichy,19.0,0.85,Rainy,0,4,7,6,1
+2027-07-05,Goa,Mapusa,10.0,0.52,Sunny,0,5,7,0,0
+2027-07-06,Mizoram,Aizawl,20.0,0.8,Stormy,0,6,7,1,0
+2027-07-07,Kerala,Thiruvananthapuram,15.0,0.56,Rainy,0,7,7,2,0
+2027-07-08,Gujarat,Vadodara,31.0,0.67,Sunny,0,8,7,3,0
+2027-07-09,Arunachal Pradesh,Ziro,32.0,0.54,Cloudy,0,9,7,4,0
+2027-07-10,Odisha,Sambalpur,27.0,0.52,Stormy,0,10,7,5,1
+2027-07-11,Maharashtra,Pune,27.0,0.81,Sunny,0,11,7,6,1
+2027-07-12,Rajasthan,Udaipur,20.0,0.53,Clear,0,12,7,0,0
+2027-07-13,Himachal Pradesh,Solan,34.0,0.73,Cloudy,0,13,7,1,0
+2027-07-14,Maharashtra,Mumbai,26.0,0.87,Rainy,0,14,7,2,0
+2027-07-15,Gujarat,Surat,29.0,0.47,Sunny,0,15,7,3,0
+2027-07-16,Odisha,Berhampur,10.0,0.7,Foggy,0,16,7,4,0
+2027-07-17,Arunachal Pradesh,Tawang,29.0,0.72,Rainy,0,17,7,5,1
+2027-07-18,Assam,Nagaon,18.0,0.68,Rainy,0,18,7,6,1
+2027-07-19,Haryana,Gurugram,11.0,0.46,Clear,0,19,7,0,0
+2027-07-20,Odisha,Cuttack,14.0,0.56,Clear,0,20,7,1,0
+2027-07-21,Uttar Pradesh,Agra,18.0,0.49,Sunny,0,21,7,2,0
+2027-07-22,Bihar,Patna,14.0,0.68,Stormy,0,22,7,3,0
+2027-07-23,Goa,Panaji,17.0,0.44,Stormy,0,23,7,4,0
+2027-07-24,Goa,Panaji,18.0,0.85,Cloudy,0,24,7,5,1
+2027-07-25,Arunachal Pradesh,Tawang,11.0,0.4,Foggy,0,25,7,6,1
+2027-07-26,Rajasthan,Jodhpur,28.0,0.52,Rainy,0,26,7,0,0
+2027-07-27,Uttar Pradesh,Agra,17.0,0.9,Foggy,0,27,7,1,0
+2027-07-28,Bihar,Darbhanga,25.0,0.71,Rainy,0,28,7,2,0
+2027-07-29,Uttarakhand,Rishikesh,16.0,0.82,Rainy,0,29,7,3,0
+2027-07-30,Jharkhand,Bokaro,27.0,0.52,Cloudy,0,30,7,4,0
+2027-07-31,Sikkim,Jorethang,31.0,0.49,Rainy,0,31,7,5,1
+2027-08-01,Bihar,Gaya,10.0,0.69,Rainy,0,1,8,6,1
+2027-08-02,Nagaland,Mokokchung,29.0,0.77,Cloudy,0,2,8,0,0
+2027-08-03,Gujarat,Ahmedabad,34.0,0.54,Cloudy,0,3,8,1,0
+2027-08-04,Tamil Nadu,Chennai,13.0,0.45,Foggy,0,4,8,2,0
+2027-08-05,Jharkhand,Bokaro,17.0,0.46,Rainy,0,5,8,3,0
+2027-08-06,West Bengal,Howrah,32.0,0.46,Cloudy,0,6,8,4,0
+2027-08-07,Telangana,Warangal,34.0,0.58,Sunny,0,7,8,5,1
+2027-08-08,Karnataka,Mangalore,20.0,0.66,Cloudy,0,8,8,6,1
+2027-08-09,Gujarat,Rajkot,33.0,0.81,Stormy,0,9,8,0,0
+2027-08-10,Assam,Nagaon,27.0,0.65,Stormy,0,10,8,1,0
+2027-08-11,Sikkim,Pakyong,23.0,0.67,Foggy,0,11,8,2,0
+2027-08-12,Uttarakhand,Nainital,31.0,0.41,Cloudy,0,12,8,3,0
+2027-08-13,Madhya Pradesh,Bhopal,18.0,0.55,Rainy,0,13,8,4,0
+2027-08-14,Telangana,Karimnagar,26.0,0.87,Foggy,0,14,8,5,1
+2027-08-15,Gujarat,Surat,15.0,0.48,Rainy,0,15,8,6,1
+2027-08-16,Goa,Ponda,28.0,0.63,Clear,0,16,8,0,0
+2027-08-17,Maharashtra,Pune,21.0,0.57,Rainy,0,17,8,1,0
+2027-08-18,Jharkhand,Deoghar,17.0,0.54,Clear,0,18,8,2,0
+2027-08-19,Madhya Pradesh,Ujjain,32.0,0.57,Clear,0,19,8,3,0
+2027-08-20,Punjab,Chandigarh,13.0,0.77,Foggy,0,20,8,4,0
+2027-08-21,Goa,Vasco da Gama,22.0,0.41,Rainy,0,21,8,5,1
+2027-08-22,Nagaland,Dimapur,20.0,0.63,Rainy,0,22,8,6,1
+2027-08-23,Rajasthan,Udaipur,12.0,0.45,Rainy,0,23,8,0,0
+2027-08-24,Madhya Pradesh,Bhopal,31.0,0.86,Rainy,0,24,8,1,0
+2027-08-25,Kerala,Thrissur,20.0,0.64,Clear,0,25,8,2,0
+2027-08-26,Jharkhand,Jamshedpur,30.0,0.59,Foggy,0,26,8,3,0
+2027-08-27,Mizoram,Aizawl,23.0,0.51,Stormy,0,27,8,4,0
+2027-08-28,Kerala,Kottayam,27.0,0.9,Clear,0,28,8,5,1
+2027-08-29,Karnataka,Belagavi,33.0,0.75,Foggy,0,29,8,6,1
+2027-08-30,Odisha,Sambalpur,35.0,0.86,Sunny,0,30,8,0,0
+2027-08-31,Tripura,Agartala,19.0,0.64,Foggy,0,31,8,1,0
+2027-09-01,Arunachal Pradesh,Aalo,11.0,0.6,Foggy,0,1,9,2,0
+2027-09-02,Sikkim,Namchi,15.0,0.52,Stormy,0,2,9,3,0
+2027-09-03,Bihar,Gaya,15.0,0.55,Foggy,0,3,9,4,0
+2027-09-04,Sikkim,Gangtok,32.0,0.43,Stormy,0,4,9,5,1
+2027-09-05,Manipur,Churachandpur,11.0,0.69,Sunny,0,5,9,6,1
+2027-09-06,Kerala,Thiruvananthapuram,29.0,0.7,Foggy,0,6,9,0,0
+2027-09-07,Sikkim,Pakyong,24.0,0.74,Sunny,0,7,9,1,0
+2027-09-08,Gujarat,Vadodara,32.0,0.77,Rainy,0,8,9,2,0
+2027-09-09,Odisha,Rourkela,10.0,0.65,Rainy,0,9,9,3,0
+2027-09-10,Sikkim,Jorethang,30.0,0.71,Foggy,0,10,9,4,0
+2027-09-11,Jharkhand,Ranchi,18.0,0.75,Cloudy,0,11,9,5,1
+2027-09-12,Gujarat,Rajkot,13.0,0.72,Rainy,0,12,9,6,1
+2027-09-13,Chhattisgarh,Raipur,23.0,0.57,Sunny,0,13,9,0,0
+2027-09-14,Bihar,Patna,29.0,0.79,Cloudy,0,14,9,1,0
+2027-09-15,Himachal Pradesh,Solan,10.0,0.45,Stormy,0,15,9,2,0
+2027-09-16,Jharkhand,Jamshedpur,24.0,0.82,Sunny,0,16,9,3,0
+2027-09-17,Meghalaya,Williamnagar,15.0,0.45,Sunny,0,17,9,4,0
+2027-09-18,Madhya Pradesh,Ujjain,11.0,0.74,Sunny,0,18,9,5,1
+2027-09-19,Chhattisgarh,Raigarh,20.0,0.57,Cloudy,0,19,9,6,1
+2027-09-20,Odisha,Sambalpur,26.0,0.83,Foggy,0,20,9,0,0
+2027-09-21,Telangana,Khammam,34.0,0.66,Clear,0,21,9,1,0
+2027-09-22,Arunachal Pradesh,Itanagar,19.0,0.73,Stormy,0,22,9,2,0
+2027-09-23,West Bengal,Howrah,24.0,0.62,Stormy,0,23,9,3,0
+2027-09-24,Haryana,Ambala,25.0,0.86,Cloudy,0,24,9,4,0
+2027-09-25,Chhattisgarh,Raipur,34.0,0.85,Sunny,0,25,9,5,1
+2027-09-26,Tripura,Belonia,32.0,0.42,Sunny,0,26,9,6,1
+2027-09-27,Tripura,Udaipur,18.0,0.78,Sunny,0,27,9,0,0

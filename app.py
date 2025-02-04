@@ -29,12 +29,12 @@ df_clean = df.dropna()
 
 # Scale features
 scaler = MinMaxScaler()
-df_clean[['humidity', 'pressure', 'hour', 'day', 'month']] = scaler.fit_transform(
-    df_clean[['humidity', 'pressure', 'hour', 'day', 'month']]
+df_clean[['humidity', 'hour', 'day', 'month']] = scaler.fit_transform(
+    df_clean[['humidity', 'hour', 'day', 'month']]
 )
 
 # Train the model
-X = df_clean[['humidity', 'hour', 'day', 'month', 'pressure']]
+X = df_clean[['humidity', 'hour', 'day', 'month', ]]
 y = df_clean['temperature']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -93,7 +93,7 @@ humidity = st.sidebar.slider("💧 Humidity (%)", 0, 100, 50)
 hour = st.sidebar.slider("⏳ Hour of the Day", 0, 23, 12)
 day = st.sidebar.slider("📅 Day of the Month", 1, 31, 1)
 month = st.sidebar.slider("📆 Month", 1, 12, 1)
-pressure = st.sidebar.slider("🌀 Pressure (hPa)", 980, 1025, 1013)
+
 
 # Scatter Plot (Actual vs Predicted)
 st.subheader("📉 Actual vs Predicted Temperature")
@@ -114,7 +114,7 @@ st.markdown("""
     - White or gray means there’s no significant relationship.
     This heatmap helps us understand how different weather variables interact with each other.
 """)
-corr = df_clean[['temperature', 'humidity', 'pressure', 'hour', 'day', 'month']].corr()
+corr = df_clean[['temperature', 'humidity', 'hour', 'day', 'month']].corr()
 plt.figure(figsize=(8, 6))
 sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', linewidths=1)
 plt.title('Correlation Heatmap')
@@ -154,7 +154,7 @@ st.pyplot()
 st.subheader(f"🌍 Weather Prediction for {city}")
 
 # Prepare input data for prediction
-input_data = np.array([[humidity, hour, day, month, pressure]])
+input_data = np.array([[humidity, hour, day, month]])
 input_data_scaled = scaler.transform(input_data)
 
 # Make Prediction
@@ -176,4 +176,4 @@ else:
 st.write(f"🌍 **Weather Condition: {weather_condition}**")
 
 # Display Input Parameters
-st.write(f"🔹 **Input values:** Humidity = {humidity}%, Hour = {hour}, Day = {day}, Month = {month}, Pressure = {pressure} hPa")
+st.write(f"🔹 **Input values:** Humidity = {humidity}%, Hour = {hour}, Day = {day}, Month = {month}")
