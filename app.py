@@ -137,11 +137,17 @@ plt.tight_layout()
 st.pyplot(fig1)
 st.markdown("""
 ### Purpose:This plot shows the distribution of temperature values in your dataset.
-### Histogram: The blue bars represent the frequency of temperature values falling within specific ranges.
-### KDE (Kernel Density Estimate): A smooth curve overlaid on the histogram (shown by kde=True) to show the probability density of the temperature distribution.
-### X-axis: Represents the temperature in degrees Celsius.
-### Y-axis: Represents the frequency, which shows how often a certain temperature value occurs.
-### Purpose of sns.histplot: It creates the histogram and the smooth KDE curve for the temperature distribution.""")
+
+Histogram: The blue bars represent the frequency of temperature values falling within specific ranges.
+
+KDE (Kernel Density Estimate): A smooth curve overlaid on the histogram (shown 
+by kde=True) to show the probability density of the temperature distribution.
+
+X-axis: Represents the temperature in degrees Celsius.
+
+Y-axis: Represents the frequency, which shows how often a certain temperature value occurs.
+
+Purpose of sns.histplot: It creates the histogram and the smooth KDE curve for the temperature distribution.""")
 
 # Humidity Distribution
 st.subheader("💧 2. Humidity Distribution")
