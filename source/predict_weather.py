@@ -5,7 +5,7 @@ import logging
 import os
 
 # Configure logging for detailed output
-logging.basicConfig(level=logging.INFO)
+logging.disable(logging.CRITICAL)
 
 class WeatherPredictor:
     def __init__(self, xgb_model_path, rf_model_path):
@@ -23,16 +23,30 @@ class WeatherPredictor:
         
         logging.info("Models loaded successfully.")
 
-    def prepare_input_data(self, humidity, hour, day, month, pressure):
-        # Prepare input data for prediction in the same format as the training data
-        input_data = pd.DataFrame([[humidity, hour, day, month, pressure]],
-                                  columns=['humidity', 'hour', 'day', 'month', 'pressure'])
+    def prepare_input_data(self, humidity, hour, day, month, pressure, city, weather_condition, year):
+        # Example one-hot encoding for city and weather
+        city_features = ['city_Bangalore', 'city_Chennai', 'city_Delhi', 'city_Hyderabad', 'city_Jaipur', 
+                         'city_Kolkata', 'city_Mumbai', 'city_Nagpur', 'city_Pune', 'city_Surat']
+        weather_features = ['weather_Clear', 'weather_Cloudy', 'weather_Foggy', 'weather_Sunny']
+        
+        # Create the one-hot encoded columns for city and weather (set 1 for the matching city and weather condition)
+        city_encoded = [1 if city == city_name else 0 for city_name in city_features]
+        weather_encoded = [1 if weather_condition == weather_name else 0 for weather_name in weather_features]
+        
+        # Create day_of_week feature (assuming the 'day' represents the day of the month, and we calculate it)
+        day_of_week = pd.to_datetime(f'{year}-{month}-{day}').weekday()  # 0=Monday, 6=Sunday
+        
+        # Prepare input data for prediction
+        # Ensure the feature order matches what the model expects
+        input_data = pd.DataFrame([[humidity, hour, day, month, pressure, day_of_week, year] + weather_encoded + city_encoded],
+                                  columns=['humidity', 'hour', 'day', 'month', 'pressure', 'day_of_week', 'year'] + weather_features + city_features)
+        
         logging.info("Input data prepared for prediction.")
         return input_data
 
-    def make_predictions(self, humidity, hour, day, month, pressure):
+    def make_predictions(self, humidity, hour, day, month, pressure, city, weather_condition, year):
         # Prepare the input data
-        input_data = self.prepare_input_data(humidity, hour, day, month, pressure)
+        input_data = self.prepare_input_data(humidity, hour, day, month, pressure, city, weather_condition, year)
 
         # Make predictions using XGBoost (via DMatrix)
         dmatrix = xgb.DMatrix(input_data)
@@ -66,9 +80,12 @@ if __name__ == "__main__":
         day = 20
         month = 5
         pressure = 1015
+        city = 'Pune'  # Example city
+        weather_condition = 'Sunny'  # Example weather condition
+        year = 2023  # Example year
 
         # Make predictions and print the results
-        predictions = predictor.make_predictions(humidity, hour, day, month, pressure)
+        predictions = predictor.make_predictions(humidity, hour, day, month, pressure, city, weather_condition, year)
         
         # Print the prediction results in a detailed and readable way
         print("\n--- Weather Prediction Results ---")

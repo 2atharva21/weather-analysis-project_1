@@ -136,7 +136,7 @@ weather-analysis-project/
 │   └── random_forest_model.pkl # Random Forest model (Pickle format)
 │
 ├── source/                     # Source code for data analysis and training
-│   ├── analyze_weather.py      # Script for weather data analysis and visualization
+│   ├── analyze_weather.py      # Script for weather data analysis and     v    isualization
 │   ├── train_model.py          # Script for training machine learning models
 │
 ├── temperature_distribution.png # Visualization of temperature distribution

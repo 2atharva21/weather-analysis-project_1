@@ -15,8 +15,11 @@ def visualize_data():
             # Convert to datetime format
             df['timestamp'] = pd.to_datetime(df['timestamp'])
 
-            # Handle any missing data by dropping rows with NaN values
+            # Handle any missing data by dropping rows with NaN values in specific columns
             df.dropna(subset=['temperature', 'humidity'], inplace=True)
+
+            # Optional: Down-sample the data if it's too large to visualize
+            df = df.sample(frac=0.1, random_state=42)  # Use 10% of the data for quicker plotting
 
             # 1. Time Series Plot: Temperature and Humidity over Time
             plt.figure(figsize=(10, 6))

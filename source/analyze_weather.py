@@ -45,6 +45,19 @@ def analyze_weather():
         plt.savefig('humidity_distribution.png')  # Save the plot
         plt.show()
 
+        # Boxplot for temperature and humidity
+        plt.figure(figsize=(10, 6))
+        sns.boxplot(x=df['temperature'], color='blue')
+        plt.title('Temperature Boxplot')
+        plt.tight_layout()
+        plt.show()
+
+        plt.figure(figsize=(10, 6))
+        sns.boxplot(x=df['humidity'], color='green')
+        plt.title('Humidity Boxplot')
+        plt.tight_layout()
+        plt.show()
+
         # Check cities with missing data
         print("\nCities with Missing Data:")
         print(df[df.isnull().any(axis=1)]['city'].unique())
