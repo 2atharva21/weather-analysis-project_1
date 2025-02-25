@@ -84,6 +84,8 @@ The following libraries are required to run the project:
 - `seaborn` - Enhanced data visualization for statistical graphics.
 
 Install all the dependencies by running:
+pip install pandas numpy streamlit xgboost seaborn matplotlib scikit-learn
+
 
 ```bash
 pip install -r requirements.txt
